@@ -21,7 +21,7 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
       <tbody>
         {rows.map((row) => (
           <tr key={row.id}>
-            <td className="sipnum">
+            <td className="leapnum">
               {row.frontmatter.leap ? (
                 <Link to={`/leaps/leap-${row.frontmatter.leap}`}>
                   {row.frontmatter.leap}
