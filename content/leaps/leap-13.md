@@ -21,7 +21,7 @@ With the end of the ignition phase on January 7, we need to establish a new set 
 | Security Module| 6,000,000 LYRA | Split between LYRA and USDC |
 | LYRA Liquidity Mining | 5,000,000 LYRA | Split equally between L1 and L2 |
 | Lyra Market LPs | 12,000,000 LYRA | Split between markets |
-| Lyra Market Traders | Up to 1,600,000 LYRA | Split between markets |
+| Lyra Market Traders | Up to 2,500,000 LYRA | Split between markets |
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
@@ -73,9 +73,9 @@ Sushi's Onsen program utilises the sushi AMM, a Uniswap V2 style system similar 
 There will be three trading rounds in this phase:
 | Round  | Start  | End | Option Market LP Rewards | Trading Rewards |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 4 | Jan 7 | Feb 4 | 4,000,000 | Up to 533,333 |
-| 5 | Feb 4 | March 4 | 4,000,000 | Up to 533,333 |
-| 6 | March 4 | April 1 | 4,000,000 | Up to 533,333 |
+| 4 | Jan 7 | Feb 4 | 4,000,000 | Up to 833,333 |
+| 5 | Feb 4 | March 4 | 4,000,000 | Up to 833,333 |
+| 6 | March 4 | April 1 | 4,000,000 | Up to 833,333 |
 
 The goal of ignition incentives was twofold. First, ensure a meaningful token distribution to help decentralise ownership and control. Second, provide a strong enough incentive to migrate sUSD liquidity to Optimism given the difficulties imposed by non-fungibility. With these goals achieved, reducing the incentives to a more sustainable rate as we approach the Avalon release is important.
 
@@ -95,11 +95,6 @@ For the following analysis, we assume a token price of $0.35 and present the abo
 - USDC will likely leave the Security Module in search of better yielding farms. This is acceptable as we do not need more capital in the SM than in the trading protocol.
 - The difference in TVL between the L1 and L2 LM programs will allow us to work out how the market is pricing the risks of bridging to Optimism.
 - We also expect some churn from the option market pools as LPs who were purely farming ignition rewards are unlocked and move capital elsewhere.
-
-#### Questions
-
-- How much capital do we want in the SM in relation to TVL in the pools? Is 100% coverage ideal, or something lower? The above ratio is 60%.
-- What is the right ratio for trading rewards to TVL in the pools?
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
