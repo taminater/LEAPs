@@ -77,7 +77,7 @@ There will be three trading rounds in this phase:
 | 5 | Feb 4 | March 4 | 4,000,000 | Up to 533,333 |
 | 6 | March 4 | April 1 | 4,000,000 | Up to 533,333 |
 
-The goal of ignition incentives was twofold. First, ensure a meaningful token distribution to help decentralise ownership and control. Second, provide a strong enough incentive to migrate sUSD liquidity to Optimism given the difficulties imposed by non-fungibility. With these goals achieved, it's important to reduce the incentives to a more sustainable rate as we approach the Avalon release.
+The goal of ignition incentives was twofold. First, ensure a meaningful token distribution to help decentralise ownership and control. Second, provide a strong enough incentive to migrate sUSD liquidity to Optimism given the difficulties imposed by non-fungibility. With these goals achieved, reducing the incentives to a more sustainable rate as we approach the Avalon release is important.
 
 ### APR Analysis
 
@@ -91,8 +91,8 @@ For the following analysis, we assume a token price of $0.35 and present the abo
 | LYRA L1 LM | 2,500,000 | 10000000 | 77 days | 41.48% |
 | LYRA Option Market LPs | 12,000,000 | 50000000 | 84 days | 36.5% |
 
-- It's unlikely we can attract more than $10M TVL in the LYRA SM at $0.35 as this would be 28.5M tokens, which is ~40% of circulting supply.
-- It's likely that USDC will leave the Security Module in search of better yielding farms. This is acceptable as we do not need more capital in the SM than in the trading protocol.
+- It's unlikely we can attract more than $10M TVL in the LYRA SM at $0.35 as this would be 28.5M tokens, which is ~40% of the circulating supply.
+- USDC will likely leave the Security Module in search of better yielding farms. This is acceptable as we do not need more capital in the SM than in the trading protocol.
 - The difference in TVL between the L1 and L2 LM programs will allow us to work out how the market is pricing the risks of bridging to Optimism.
 - We also expect some churn from the option market pools as LPs who were purely farming ignition rewards are unlocked and move capital elsewhere.
 
