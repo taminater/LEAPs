@@ -90,9 +90,9 @@ For the following analysis, we assume a token price of $0.35 and present the abo
 | Group  | Reward  | TVL | Duration | Indicative APR |
 | ----------- | ----------- | ----------- | ----------- |  ----------- |
 | LYRA Security Module| 3,000,000 | 25000000 | 77 days | 19.9% |
-| USDC Security Module | 3,000,000 | 54000000 | 84 days | April 1 | 8.45% |
+| USDC Security Module | 3,000,000 | 54000000 | 84 days | 8.45% |
 | LYRA L2 LM| 2,500,000 | 7000000 | 77 days | 59.25% |
-| LYRA L1 LM | 2,500,000 | 15000000 | 77 days | April 1 | 27.65% |
+| LYRA L1 LM | 2,500,000 | 15000000 | 77 days | 27.65% |
 | LYRA Option Market LPs | 15,000,000 | 62500000 | 84 days | 36.5% |
 
 - It's likely that USDC will leave the Security Module as there are better yielding farms. This is acceptable as we do not need more capital in the SM than in the trading protocol.
