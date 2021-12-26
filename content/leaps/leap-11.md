@@ -1,7 +1,7 @@
 ---
 leap: 11
 title: Retroactive Community Distribution 
-status: Approved
+status: Implemented
 author: Nick Forster (@nickf24)
 created: 2021-11-25
 ---
