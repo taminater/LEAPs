@@ -10,7 +10,7 @@ created: 2021-12-23
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-The next phase of incentives for Lyra between January 7 and April 1, designed to see the project through to the Avalon release. In addition to continuing incentives for the option market LPs and traders, this phase will introduce the LYRA Security Module and build liquidity in the LYRA token.
+This LEAP proposes the next phase of incentives for Lyra between January 7 and April 1, designed to see the project through to the Avalon release. In addition to continuing protocol incentives for option market LPs and traders, this phase will introduce the LYRA Security Module and build liquidity in the LYRA token.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
@@ -20,8 +20,8 @@ With the end of the ignition phase on January 7, we need to establish a new set 
 | ----------- | ----------- | | ----------- |
 | Security Module| 6,000,000 LYRA | Split between LYRA and USDC |
 | LYRA Liquidity Mining | 5,000,000 LYRA | Split equally between L1 and L2 |
-| Lyra Market LPs | 12,000,000 LYRA | Split between markets |
-| Lyra Market Traders | Up to 2,500,000 LYRA | Split between markets |
+| Lyra Market LPs | 12,000,000 LYRA | Spread over 3 rounds between all markets |
+| Lyra Market Traders | Up to 2,500,000 LYRA | Spread over 3 rounds between all markets |
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
@@ -79,9 +79,22 @@ There will be three trading rounds in this phase:
 
 The goal of ignition incentives was twofold. First, ensure a meaningful token distribution to help decentralise ownership and control. Second, provide a strong enough incentive to migrate sUSD liquidity to Optimism given the difficulties imposed by non-fungibility. With these goals achieved, reducing the incentives to a more sustainable rate as we approach the Avalon release is important.
 
+#### Option Market LP Rewards
+
+The rewards for each round will be split 45:45:10 between the ETH, BTC and LINK markets. If new markets are launched throughout the program, the council has the right to update these ratios without passing a new LEAP.
+
+#### Trading Rewards
+
+The amount quoted is the maximum number of LYRA that can be distributed to traders for the round. The actual amount will be determined as follows:
+- Long positions: 0.35 LYRA per $1 of fees paid
+- Short positions: 0.45 LYRA per $1 of fees paid
+- Short collateral: LYRA LP reward rate * 2/3 * time short position held
+
+If the cap for a round is hit, rewards will be distributed among all traders equally. For example, if a trader is owed 100 LYRA but the total owed for the round is 20% more than the cap, the trader would only receive 100/120 = 83 LYRA.
+
 ### APR Analysis
 
-For the following analysis, we assume a token price of $0.35 and present the above programs' indicative APRs with their target TVL.
+For the following analysis, we assume a token price of $0.35 and present the above programs' indicative APRs with the targeted TVL.
 
 | Group  | Reward  | Target TVL | Duration | Indicative APR |
 | ----------- | ----------- | ----------- | ----------- |  ----------- |
