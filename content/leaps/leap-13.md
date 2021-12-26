@@ -111,7 +111,7 @@ For the following analysis, we assume a token price of $0.35 and present the abo
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
-The values pertaining to the liquidity mining program are configurable and may be updated after discussion has taken place.
+All rewards programs are configurable after discussion in Discord.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
