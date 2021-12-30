@@ -14,14 +14,14 @@ This LEAP proposes the next phase of incentives for Lyra between January 7 and A
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-With the end of the ignition phase on January 7, we need to establish a new set of incentives that allows the protocol to keep growing in the leadup to xLYRA, which will introduce a long-term emissions structure that aligns token holders, LPs and traders. This LEAP proposes distributing 25,500,000 LYRA (2.55% of total supply) between January 7 and April 1 to the following groups:
+With the end of the ignition phase on January 7, we need to establish a new set of incentives that allows the protocol to keep growing in the leadup to xLYRA, which will introduce a long-term emissions structure that aligns token holders, LPs and traders. This LEAP proposes distributing 27,000,000 LYRA (2.7% of total supply) between January 7 and April 1 to the following groups:
 
 | Group  | Reward  | Notes |
 | ----------- | ----------- | | ----------- |
 | Security Module| 6,000,000 LYRA | Split between LYRA and USDC |
 | LYRA Liquidity Mining | 5,000,000 LYRA | Split equally between L1 and L2 |
 | Lyra Market LPs | 12,000,000 LYRA | Spread over 3 rounds between all markets |
-| Lyra Market Traders | Up to 2,500,000 LYRA | Spread over 3 rounds between all markets |
+| Lyra Market Traders | Up to 4,000,000 LYRA | Spread over 3 rounds between all markets |
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
@@ -73,9 +73,9 @@ Sushi's Onsen program utilises the sushi AMM, a Uniswap V2 style system similar 
 There will be three trading rounds in this phase:
 | Round  | Start  | End | Option Market LP Rewards | Trading Rewards |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 4 | Jan 7 | Feb 4 | 4,000,000 | Up to 833,333 |
-| 5 | Feb 4 | March 4 | 4,000,000 | Up to 833,333 |
-| 6 | March 4 | April 1 | 4,000,000 | Up to 833,333 |
+| 4 | Jan 7 | Feb 4 | 4,000,000 | Up to 1,333,333.33 |
+| 5 | Feb 4 | March 4 | 4,000,000 | Up to 1,333,333.33 |
+| 6 | March 4 | April 1 | 4,000,000 | Up to 1,333,333.33 |
 
 The goal of ignition incentives was twofold. First, ensure a meaningful token distribution to help decentralise ownership and control. Second, provide a strong enough incentive to migrate sUSD liquidity to Optimism given the difficulties imposed by non-fungibility. With these goals achieved, reducing the incentives to a more sustainable rate as we approach the Avalon release is important.
 
@@ -86,11 +86,13 @@ The rewards for each round will be split 45:45:10 between the ETH, BTC and LINK 
 #### Trading Rewards
 
 The amount quoted is the maximum number of LYRA that can be distributed to traders for the round. The actual amount will be determined as follows:
-- Long positions: 0.35 LYRA per $1 of fees paid
-- Short positions: 0.45 LYRA per $1 of fees paid
+- Long positions: 0.8 LYRA per $1 of fees paid
+- Short positions: 1 LYRA per $1 of fees paid
 - Short collateral: LYRA LP reward rate * 2/3 * time short position held
 
 If the cap for a round is hit, rewards will be distributed among all traders equally. For example, if a trader is owed 100 LYRA but the total owed for the round is 20% more than the cap, the trader would only receive 100/120 = 83 LYRA.
+
+The Council has the authority to update these values by providing 24 hours notice if the price of LYRA increases above $0.70. Updates will apply once the 24 hour period has finished.
 
 ### APR Analysis
 
