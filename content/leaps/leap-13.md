@@ -14,7 +14,11 @@ This LEAP proposes the next phase of incentives for Lyra between January 7 and A
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
+<<<<<<< HEAD
 With the end of the ignition phase on January 7, we need to establish a new set of incentives that allows the protocol to keep growing in the leadup to xLYRA, which will introduce a long-term emissions structure that aligns token holders, LPs and traders. This LEAP proposes distributing 28,000,000 LYRA (2.8% of total supply) between January 7 and April 1 to the following groups:
+=======
+With the end of the ignition phase on January 7, we need to establish a new set of incentives that allows the protocol to keep growing in the leadup to xLYRA, which will introduce a long-term emissions structure that aligns token holders, LPs and traders. This LEAP proposes distributing 25,500,000 LYRA (2.55% of total supply) between January 7 and April 1 to the following groups:
+>>>>>>> main
 
 | Group  | Reward  | Notes |
 | ----------- | ----------- | | ----------- |
@@ -113,7 +117,7 @@ For the following analysis, we assume a token price of $0.35 and present the abo
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
-The values pertaining to the liquidity mining program are configurable and may be updated after discussion has taken place.
+All rewards programs are configurable after discussion in Discord.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

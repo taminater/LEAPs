@@ -1,7 +1,7 @@
 ---
 leap: 12
 title: Distribute LYRA on Optimism
-status: Approved
+status: Implemented
 author: mjs (@mjs-12)
 created: 2021-11-29
 ---
