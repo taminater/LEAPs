@@ -1,7 +1,7 @@
 ---
 leap: 14
 title: Reimburse LYRA to LPs
-status: Proposed
+status: Approved
 author: jake (@earthtojake)
 created: 2022-01-12
 ---
