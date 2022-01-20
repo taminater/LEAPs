@@ -64,7 +64,7 @@ Token Holders are community members that hold the LYRA token or one of the relat
 
 #### 3. Council
 The Lyra Council is a five-seat council that will sit for three calendar months at a time. During this time, the council will be responsible for voting on LEAPs. Sitting on the council is expected to take on average 100 hours of time per month, which includes:
-- Overseeing and promoting discussion and community involvement of the LEAP process.
+- Overseeing and promoting discussion and community involvement in the LEAP process.
 - Voting to pass or deny LEAPs in a timely manner.
 - Keeping up to date in Discord and in the broader DeFi community.
 
