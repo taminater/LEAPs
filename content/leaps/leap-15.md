@@ -19,7 +19,7 @@ The essence of V1 governance is a five-seat representative council elected by th
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
-The Lyra Launch Council, established [here](https://blog.lyra.finance/introducing-the-lyra-launch-council/) and extended in [LEAP-10](https://leaps.lyra.finance/leaps/leap-10) is coming to a close. Having launched the LYRA token, it's now possible for token holders to elect the new council. In preparation, we would like to formalise the governance process that have been running informally since the inception of the Lyra Launch Council and define the election process.
+The Lyra Launch Council, established [here](https://blog.lyra.finance/introducing-the-lyra-launch-council/) and extended in [LEAP-10](https://leaps.lyra.finance/leaps/leap-10) is coming to a close. Having launched the LYRA token, it's now possible for token holders to elect the new council. In preparation, we would like to codify the processes that have been running informally since the inception of the Lyra Launch Council and define the election process.
 
 Governance is crucial to get right and yet very complex. As such, we intend the evolution of Lyra's governance to be an iterative process, moving progressively toward more decentralisation. By enabling LYRA token holders to elect the Council, V1 provides a meaningful advance over the Lyra Launch Council.
 
