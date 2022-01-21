@@ -2,7 +2,7 @@
 leap: 15
 title: Lyra Governance V1
 status: Draft
-author: Mjs (@mjs-12), Birdo (@birdo)
+author: Mjs (@mjs-12), Birdo (@helloitsbirdo)
 created: 2022-01-18
 ---
 
@@ -14,7 +14,7 @@ This LEAP proposes V1 of Lyra's governance.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-The essence of V1 governance is a five-seat representative council elected by the LYRA token holders. This group is known as the "Lyra Council" and has the mandate to administer the LEAP framework, which seeks to ensure that changes to the protocol are transparent and well-governed. The Lyra Council sits for three calendar months, after which a new Council is elected. Sitting on the Council is expected to take ~100 hours per month and members will receive 10,000 LYRA each month.
+The essence of V1 governance is a five-seat representative council elected by the LYRA token holders. This group is known as the "Lyra Council" and has the mandate to administer the LEAP framework, which seeks to ensure that changes to the protocol are transparent and well-governed. The Lyra Council sits for three calendar months, after which a new Council is elected. Sitting on the Council is expected to take ~100 hours per month and each member will receive 10,000 LYRA per month.
 
 
 ##  Motivation
@@ -50,6 +50,8 @@ A LEAP is a proposal to change part of the Lyra Protocol and can be created by a
 - Modifying the governance process itself [LEAP-10](https://leaps.lyra.finance/leaps/leap-10).
 - Adding new features or improvements to the protocol.
 
+Passing a LEAP requires a majority of votes in favour (i.e. 3/5).
+
 #### 2. Token Holders
 Token Holders are community members that hold the LYRA token or one of the related tokens listed below. Token holders are eligible to vote in council elections. Tokens that are controlled by the Lyra DAO are not eligible to vote.
 
@@ -59,7 +61,7 @@ Token Holders are community members that hold the LYRA token or one of the relat
 | LYRA Optimism Holders | 1x | [0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb](https://optimistic.etherscan.io/token/0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb)   |
 | stkLYRA Holders | 1.2x | [0xb9619D73C08076bC5d4f0470593e98b9eb19a219](https://etherscan.io/token/0xb9619D73C08076bC5d4f0470593e98b9eb19a219)|
 | WETH/LYRA 1% Uniswap V3 Optimism | 1x | [0xf334f6104a179207ddacfb41fa3567feea8595c2](https://optimistic.etherscan.io/address/0xf334f6104a179207ddacfb41fa3567feea8595c2)|
-| WETH/LYRA Sushiswap | 1x | [0x52DaC05FC0000e9F01CE9A1E91592BfbFcE87350](https://etherscan.io/token/0x52DaC05FC0000e9F01CE9A1E91592BfbFcE87350)|
+| WETH/LYRA Sushiswap | 1x| [0x52DaC05FC0000e9F01CE9A1E91592BfbFcE87350](https://etherscan.io/token/0x52DaC05FC0000e9F01CE9A1E91592BfbFcE87350)|
 | Escrowed LYRA Holders | 0.25x | Multiple vesting contract addresses |
 
 #### 3. Council
@@ -71,9 +73,16 @@ The Lyra Council is a five-seat council that will sit for three calendar months 
 Given the above, this is an incentivised role and each council member will be compensated with 10,000 LYRA per month.
 
 #### 4. Election
-The election process consists of three phases, nominations, voting and transition. Nominations begin seven days before the current council period finishes. Candidates must nominate themselves in Discord and must have been a Discord member for over three months to be eligible for nomination. Please provide a short write-up of why you would be a suitable member of the Lyra Council as part of your nomination.
+The election process begins one week prior to the conclusion of the current council period and consists of two distinct phases:
+- Nominations (4 days)
+- Voting: (3 days)
 
-Voting begins three days before the current council period finishes. Voting will take place on snapshot with a custom strategy that enables the groups listed above to vote. After the voting window, the five nominees with the highest number of votes will receive a council NFT granting them the right to vote on LEAPS. They will begin their term immediately.
+At the end of the voting period, the five nominees with the highest number of votes will receive a council NFT granting them the right to vote on LEAPS.
+
+![Process](assets/leap-15/process.png)
+
+Candidates must nominate themselves in Discord and must have been a Discord member for over three months to be eligible for nomination. Candidates should provide a short write-up of why they would be a suitable member of the Lyra Council as part of their nomination.
+Voting will take place on snapshot with a custom strategy that enables eligible groups to vote.
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
