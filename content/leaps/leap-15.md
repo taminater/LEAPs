@@ -1,7 +1,7 @@
 ---
 leap: 15
 title: Lyra Governance V1
-status: Draft
+status: Proposed
 author: Mjs (@mjs-12), Birdo (@helloitsbirdo)
 created: 2022-01-18
 ---
@@ -14,7 +14,7 @@ This LEAP proposes V1 of Lyra's governance.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-The essence of V1 governance is a five-seat representative council elected by the LYRA token holders. This group is known as the "Lyra Council" and has the mandate to administer the LEAP framework, which seeks to ensure that changes to the protocol are transparent and well-governed. The Lyra Council sits for three calendar months, after which a new Council is elected. Sitting on the Council is expected to take ~100 hours per month and each member will receive 10,000 LYRA per month.
+The essence of V1 governance is a five-seat representative council elected by the LYRA token holders. This group is known as the "Lyra Council" and has the mandate to administer the LEAP framework, which seeks to ensure that changes to the protocol are transparent and well-governed. The Lyra Council sits for three calendar months, after which a new Council is elected.
 
 
 ##  Motivation
@@ -65,12 +65,14 @@ Token Holders are community members that hold the LYRA token or one of the relat
 | Escrowed LYRA Holders | 0.25x | Multiple vesting contract addresses |
 
 #### 3. Council
-The Lyra Council is a five-seat council that will sit for three calendar months at a time. During this time, the council will be responsible for voting on LEAPs. Sitting on the council is expected to take on average 100 hours of time per month, which includes:
+The Lyra Council is a five-seat council that will sit for three calendar months at a time. During this time, the council will be responsible for voting on LEAPs. Sitting on the council is expected to take on average 100 hours of time per month, which includes, but is not limited to:
 - Overseeing and promoting discussion and community involvement in the LEAP process.
 - Voting to pass or deny LEAPs in a timely manner.
 - Keeping up to date in Discord and in the broader DeFi community.
 
-Given the above, this is an incentivised role and each council member will be compensated with 10,000 LYRA per month.
+Given the above, this is an incentivised role and each council member will receive the following each month:
+- 5000 LYRA
+- $2000 worth of LYRA, with the rate determined by the DAO at the time the transaction is made.
 
 #### 4. Election
 The election process begins one week prior to the conclusion of the current council period and consists of two distinct phases:
