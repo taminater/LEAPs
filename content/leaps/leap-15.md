@@ -72,7 +72,7 @@ The Lyra Council is a five-seat council that will sit for three calendar months 
 
 Given the above, this is an incentivised role and each council member will receive the following each month:
 - 5000 LYRA
-- $2000 worth of LYRA, with the rate determined by the DAO at the time the transaction is made.
+- $2000 worth of LYRA, using the open price on coingecko on the first of each month. If this price is less than $0.05, the DAO may pay council members in USDC. 
 
 #### 4. Election
 The election process begins one week prior to the conclusion of the current council period and consists of two distinct phases:
