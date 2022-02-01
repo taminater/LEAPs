@@ -15,9 +15,6 @@ interface Props {
 
 const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
   const { group } = allMarkdownRemark
-
-  console.log(group)
-
   const columns = flow(
     filter(({ fieldValue }) => statuses.indexOf(fieldValue) > -1),
     sortBy(({ fieldValue }) => statuses.indexOf(fieldValue)),
