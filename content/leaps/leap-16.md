@@ -2,7 +2,7 @@
 leap: 16
 title:  Anytime Entry Exit
 status: Draft
-author: Sean Dawson (@SeanDaws), Domrom (@DominicRomanowski), Anton Jurisevic (@zyzek), Vladislav Abramov (@vladislavabramov)
+author: Sean Dawson (@SeanDaws), Domrom (@DominicRomanowski), Anton Jurisevic (@zyzek), Vladislav Abramov (@vladislavabramov), Lochcrest (@Lochcrest)
 created: 2022-02-01
 ---
 
