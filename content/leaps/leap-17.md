@@ -1,5 +1,5 @@
 ---
-LEAP: 17
+leap: 17
 title: Establishing GrantsDAO
 status: Draft
 author: Cinque (@Cinqu3), Burtrock
