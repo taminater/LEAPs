@@ -34,7 +34,7 @@ Community grants are a great way to reward contributors for providing meaningful
 ### Overview
 <!--This is a high level overview of *how* the LEAP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 GrantsDAO will be governed by three members that are elected by token holder vote. GrantsDAO members are responsible for rewarding grants and allocating the GrantDAO funds.
-GrantsDAO will consist of three DAO members and two Core Contributors.
+GrantsDAO will consist of two DAO members and 1 Core Contributor.
 
 
 ### Rationale
