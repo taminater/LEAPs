@@ -74,7 +74,7 @@ The first entry in the observation sequence \\((\sigma_0, t_0)\\) will be initia
 
 #### Pool Net Asset Value
 
-When a user comes to deposit/withdraw, the AMM must determine the value of the pool to compute the value of a single LP token.
+When a user comes to deposit or withdraw, the AMM must determine the value of the pool to compute the value of a single LP token.
 Let the trading liquidity \\(L\\) denote the amount of sUSD available for trading (i.e. used to buy/collateralise options). Further, we define the hedging liquidity \\(H\\) to be the sum of free sUSD for hedging, purchased sAssets (if net long), sUSD locked for short sold assets and sAssets debt (if net short).
 
 There are 3 other components needed to determine to the net value (NAV) of the pool:
@@ -118,7 +118,7 @@ Similarly with deposits, the pool tracks total number of LP tokens that have sig
 In particular, when an individual user signals the withdrawal of \\(y\\) LP tokens, a record is added to a withdrawal queue, \\(Y\\) is incremented by \\(y\\), and those LP tokens are burned.
 After the signalling time, the withdrawal can be processed from the queue if there are no unprocessed withdrawals ahead of it. Upon processing, \\(Y\\) is decremented by \\(y\\) and the user receives a value \\(v\\) sUSD from the reserved sUSD, where:
     \\[v = \omega \times y \times (1 - \phi)\\]
-To prevent attacks and protect continuing LPs, a small fee of \\(\phi = 0.005\\) (i.e. 0.5%) is charged on all withdrawals. This fee is added back into to the pool to benefit continuing LPs. When there are no listed boards (such as when migration to V2 occurs) the fee will be set to \\(\phi = 0\\). The withdrawal fee \\(\phi\\) can be adjusted based on Council votes.
+To prevent attacks and protect continuing LPs, a small fee of \\(\phi = 0.002\\) (i.e. 0.2%) is charged on all withdrawals. This fee is added back into to the pool to benefit continuing LPs. When there are no listed boards (such as when migration to V2 occurs) the fee will be set to \\(\phi = 0\\). The withdrawal fee \\(\phi\\) can be adjusted based on Council votes.
 
 Note that if there are insufficient funds free to process outstanding withdrawals, then all users will wait for open contracts to close or for existing boards to be liquidated. This will free up liquidity that will be immediately set aside for queued withdrawals.
 
@@ -132,11 +132,10 @@ where \\(m\\) is a parameter tuned for each pool. For instance, \\(m\\) could be
 
 When \\(L < M\\) the liquidity circuit breaker will fire and all deposits and withdrawals will be blocked. The circuit breaker will continue to fire until \\(L \ge M\\). A countdown timer of \\(\tau_{liq} = 3\\) days then begins, during which deposits and withdrawals will continue to be blocked. After this period, deposits and withdrawals will recommence.
 
-A deposit/withdrawal that has signalled for at least \\(G=14\\) days can be approved by a "guardian" (a multisig consisting of core contributors and Council members). Guardians have the ability to bypass the circuit breaker and approve deposits/withdrawals which have been signalled for at least \\(G\\) days and/or block new expiries from being listed until funds are freed.
-
 If a user is meant to have their funds processed while deposits/withdrawals are blocked, then these transactions can occur immediately after the embargo lifts.
 
 Users can signal to withdraw funds that could send the free liquidity in the pool to 0 and thereby trigger the circuit breaker.
+
 #### Volatility Circuit Breaker
 
 The second circuit breaker ensures that the GWAV and spot volatilities/skews are sufficiently close. If these quantities diverge, then it is most likely unfavourable to current LPs to permit deposits and/or withdrawals. Let
@@ -155,7 +154,21 @@ Here \\(R_m = 0.05\\) and \\(b_m = 0.05\\) are the maximum absolute differences 
 If either of these conditions fails, then the volatility circuit breaker fires.
 When the volatility circuit breaker fires, all deposits and withdrawals cannot be processed. This lockout continues until the circuit breaker stops firing, at which point a cooldown period of \\(\tau_{vol} = 2\times\mathcal{T} = 12\\) hours begins. During this cooldown period, deposits and withdrawals are locked. At the end of the cooldown period, deposits and withdrawals are immediately able to recommence.
 
-Guardians have the ability to bypass the liquidity and/or volatility circuit breakers if a deposit/withdrawal has been signalled for at least \\(G\\) days.
+#### Guardians
+
+It is important that the pool maintain a large amount of liquidity on hand to maximise profits for LPs during volatile market conditions. However, these are also the most likely times when the circuit breakers fire. Prolonged periods of low liquidity also means withdrawers could be stuck waiting to retrieve their funds for considerable periods of time.
+
+To solve these issues we introduce the idea of Guardians.
+
+The Guardians consist of two core contributors and the five member of the Council. Core contributors on the Council do not count as core contributor picks. Guardians have the following powers:
+
+1. Fast track deposits which have been signalled for, say, > 6 hrs when trading liquidity is below a certain percentage of the NAV (say, \\(L<0.10\Omega)\\). Fast tracked deposits can still be processed if one or both of the circuit breakers are firing.
+2. Approve deposits/withdrawals which have been signalled for at least \\(G\\) days where \\(G\\) is 2x the duration of regular deposits/withdrawals as a safety override.
+
+For the Guardians to approve a deposit/withdrawal, 3 out of the 7 must approve.
+
+A smart contract will be deployed to enforce the powers of the Guardians. At the launch of Avalon this contract will only give Guardians the power described in point 2. A future LEAP will propose the specific parameters and implementation details of fast-tracking.
+
 #### Rolling Expiries
 
 As mentioned earlier, Avalon seeks to improve the trading experience of users by offering a much larger set of expiries, namely 1, 2, 3, 4, 6, 8 and 12 weeks. Every two weeks new 3 and 12 week boards will be added to maintain this structure.
@@ -173,7 +186,7 @@ Any change to these parameters will typically be given well in advance (at least
 
 | Name | Symbol | Value |
 | ---- | ------ | ----- |
-| Withdrawal Fee | \\(\phi\\) | 0.5\% |
+| Withdrawal Fee | \\(\phi\\) | 0.2\% |
 Signalling Time | \\(\mathcal{S}\\) | 7 days |
 GWAV Length | \\(\mathcal{T}\\) | 6 hours |
 Max Skew Difference | \\(R_m\\) | 0.05 |
