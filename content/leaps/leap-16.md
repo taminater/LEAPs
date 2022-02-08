@@ -160,7 +160,7 @@ It is important that the pool maintain a large amount of liquidity on hand to ma
 
 To solve these issues we introduce the idea of Guardians.
 
-The Guardians consist of two core contributors and the five member of the Council. Core contributors on the Council do not count as core contributor picks. Guardians have the following powers:
+The Guardians consist of two core contributors and the five members of the Council. Core contributors on the Council do not count as core contributor picks. Guardians have the following powers:
 
 1. Fast track deposits which have been signalled for, say, > 6 hrs when trading liquidity is below a certain percentage of the NAV (say, \\(L<0.10\Omega)\\). Fast tracked deposits can still be processed if one or both of the circuit breakers are firing.
 2. Approve deposits/withdrawals which have been signalled for at least \\(G\\) days where \\(G\\) is 2x the duration of regular deposits/withdrawals as a safety override.
