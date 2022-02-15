@@ -79,15 +79,15 @@ Build a smart contract + frontend that allows GrantsDAO members to vote on grant
 5. Management of Funds
 	
 	Initially, grants approved by the GrantsDAO will be agreed on and funded by Lyra's DAO multisig.
-	Once the Lyra treasury is established, 100,000 LYRA is allocated to GrantsDAO each epoch. The monetary responsibilities of GrantsDAO include, but are not limited to:
+	Once the Lyra treasury is established, $50,000 denominated in LYRA with a maximum of 250,000 LYRA is allocated to GrantsDAO each epoch. At the end of the epoch, any allocated funds that are not used are returned to the treasury.
+	The monetary responsibilities of GrantsDAO include, but are not limited to:
 	- Maintaining a budget in the GrantsDAO multisig contract.
 	- Allocating funds to the grants that have been approved.
-
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
 	Number of seats = 5
-	DAO allocated funds = 100,000 LYRA
+	DAO allocated funds = $50,000 USD (max: 250,000 LYRA)
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
