@@ -9,10 +9,10 @@ interface Props {
 
 const StatusTable: React.FC<Props> = ({ rows }) => {
   return (
-    <table className="siptable">
+    <table className="leaptable">
       <thead>
         <tr>
-          <th className="sipnum">Number</th>
+          <th className="leapnum">Number</th>
           <th className="title w-2/3">Title</th>
           <th className="author w-1/3">Author</th>
         </tr>
@@ -21,7 +21,7 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
       <tbody>
         {rows.map((row) => (
           <tr key={row.id}>
-            <td className="sipnum">
+            <td className="leapnum">
               {row.frontmatter.leap ? (
                 <Link to={`/leaps/leap-${row.frontmatter.leap}`}>
                   {row.frontmatter.leap}

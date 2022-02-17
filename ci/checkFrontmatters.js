@@ -18,19 +18,10 @@ const commonValidationSchema = Yup.object().shape({
   'discussions-to': Yup.string().nullable(),
 })
 
-const sipValidationSchema = commonValidationSchema
+const leapValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      sip: Yup.number().required(),
-    }),
-  )
-  .noUnknown()
-  .strict()
-
-const sccpValidationSchema = commonValidationSchema
-  .concat(
-    Yup.object().shape({
-      sccp: Yup.number().required(),
+      leap: Yup.number().required(),
     }),
   )
   .noUnknown()
@@ -38,25 +29,15 @@ const sccpValidationSchema = commonValidationSchema
 
 ;(async () => {
   try {
-    const sips = await g('./content/leaps/*.md')
-    // const sccp = await g('./content/sccp/*.md')
+    const leaps = await g('./content/leaps/*.md')
 
-    // SIP
     await Promise.all(
-      sips.map(async (file) => {
+      leaps.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        return await sipValidationSchema.validate({ file, ...attributes })
+        return await leapValidationSchema.validate({ file, ...attributes })
       }),
     )
-    // SCCP
-    // await Promise.all(
-    //   sccp.map(async (file) => {
-    //     const content = await fs.readFile(file, 'utf-8')
-    //     const { attributes } = fm(content)
-    //     return await sccpValidationSchema.validate({ file, ...attributes })
-    //   }),
-    // )
   } catch (error) {
     console.error({
       value: error.value,
