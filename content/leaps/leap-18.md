@@ -1,7 +1,8 @@
 ---
-leap: 18 title:  Universal Closing and Partial Collateralization status: Draft author: Sean Dawson (@SeanDaws),
-Vladislav Abramov (@vladislavabramov), Joshua Kim (@joshua0702k), Domrom (@DominicRomanowski), Nick Forster (@nickf24),
-Lochcrest (@Lochcrest)
+leap: 18
+title:  Universal Closing and Partial Collateralization
+status: Draft
+author: Sean Dawson (@SeanDaws), Vladislav Abramov (@vladislavabramov), Joshua Kim (@joshua0702k), Domrom (@DominicRomanowski), Nick Forster (@nickf24), Lochcrest (@Lochcrest)
 created: 2022-02-18
 ---
 
@@ -19,8 +20,7 @@ improve capital efficiency by allowing users to partially collateralize short op
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 This proposal will greatly improve the trader user experience (UX) on Lyra. In V1, users are unable to close very in the
 money (ITM) longs (to cash in profits) or out of the money (OTM) shorts (to free up collateral). In this LEAP, we
-propose a mechanism by which users can close any trade, regardless of its delta or time to expiry. We call this
-Universal Closing (UC).
+propose a mechanism by which users can close any trade, regardless of its delta or time to expiry.
 
 Another issue with V1 is how capitally inefficient short selling options is for traders. Currently, shorts are fully
 collateralized, meaning selling large amounts of options is out of reach for most users. This LEAP introduces partially
