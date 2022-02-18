@@ -1,5 +1,5 @@
 ---
-LEAP: 17
+leap: 17
 title: Establishing GrantsDAO
 status: Draft
 author: Cinque (@Cinqu3), Burtrock
@@ -33,9 +33,7 @@ Community grants are a great way to reward contributors for providing meaningful
 
 ### Overview
 <!--This is a high level overview of *how* the LEAP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
-GrantsDAO will be governed by five members that are elected by token holder vote. GrantsDAO members are responsible for rewarding grants and allocating the GrantDAO funds.
-GrantsDAO will consist of Three DAO members and Two Core Contributors.
-
+GrantsDAO token holder vote would select Three DAO members with the most votes and Two Core-Contributor's with the most votes. LyraDAO will distribute an NFT to the selected members to facilitate voting on grants and allocation of grant funds. GrantsDAO members are responsible for rewarding grants and allocating the GrantDAO funds.
 
 ### Rationale
 Setting up a GrantsDAO is another step towards decentralized governance. This will enable LyraDAO to manage funds towards the betterment of the protocol and attract the talent, skills and, culture to develop and sustain the growth of Lyra.
@@ -74,7 +72,8 @@ Build a smart contract + frontend that allows GrantsDAO members to vote on grant
 4. Election
 
 	The initial Grants DAO members will serve till the end of next council term.
-	The GrantsDAO election process starts exactly after the council election ends. The election process will hold the same election rules as the LyraDAO Council election. see [LEAP-15](https://leaps.lyra.finance/leaps/leap-15/).
+	The GrantsDAO election process starts exactly after the council election ends. The election process will hold the similar election rules as the LyraDAO Council election. see [LEAP-15](https://leaps.lyra.finance/leaps/leap-15/).
+	At the end of the voting period, the Three DAO members with most votes and Two Core-Contributors with most votes will receive an NFT from LyraDAO, granting them the right to vote on grants and allocation of grant funds.
 
 5. Management of Funds
 	
