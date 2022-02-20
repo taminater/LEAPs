@@ -1,7 +1,7 @@
 ---
 leap: 17
 title: Establishing GrantsDAO
-status: Draft
+status: Proposed
 author: Cinque (@Cinqu3), Burtrock
 editor: Ksett
 created: 2022-02-03
