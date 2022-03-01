@@ -1,7 +1,7 @@
 ---
 leap: 19
 title: Launch SOL Market
-status: Proposed
+status: Implemented
 author: Nick Forster (@nickf24)
 created: 2022-02-21
 ---
