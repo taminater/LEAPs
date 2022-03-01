@@ -1,7 +1,7 @@
 ---
 leap: 15
 title: Lyra Governance V1
-status: Approved
+status: Implemented
 author: Mjs (@mjs-12), Birdo (@helloitsbirdo)
 created: 2022-01-18
 ---
