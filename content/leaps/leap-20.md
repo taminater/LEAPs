@@ -61,10 +61,10 @@ Token allocations established in LEAP-7 are to be merged into a single pool of t
 - Token liquidity (5%) 
 
 ### (1) Inflationary Rewards 
-#### Current
+#### **Current**
 - No direct inflationary rewards for stakers, however token holders can stake LYRA in the Security Module on L1 (and putting themselves at risk of slashing due to a shortfall event) in return for 38,961 LYRA / day (3,000,000 LYRA over 2.5 months, 1.44% of supply annualized) 
 
-#### Proposal
+#### **Proposal**
 - xLYRA holders will receive a share of token rewards in proportion to their xLYRA balance, which will begin at 750,000 locked LYRA / week (39,000,000/year, 3.9%)
 - By default, this inflation rate should decrease by 50% each year, beginning one year after the first round of inflationary rewards are paid. The Council can elect to change this schedule with **one month’s notice** to the community.
 - Inflationary rewards will be distributed **weekly** in LYRA locked for 6 months (into xLYRA). This can be immediately relocked if desired. 
@@ -72,7 +72,7 @@ Token allocations established in LEAP-7 are to be merged into a single pool of t
 - The LYRA security module will be **deprecated** until there is a better fit for it within the protocol. The USDC security module will remain. 
 - Governance voting will be restricted to xLYRA holders and holders of escrowed LYRA. Lyra council votes will be determined by xLYRA balances, and escrowed tokens will be treated as if they were locked into xLYRA for the minimum of (time until unlock, maximum xLYRA lock time) with a 0.25 weighting penalty to their vote weight.
 
-#### Rationale
+#### **Rationale**
 Paying inflation to Lyra stakers encourages holders to both participate in governance, trade/LP on the protocol, and hold the token for longer periods of time. Increased volume and liquidity make governance power more valuable, creating a flywheel effect. Flywheel effects can be extremely powerful when initiated at the correct time, but can backfire when invoked poorly. Without a credible plan to substitute inflationary rewards for intrinsic token utility, continued inflation can debase token value by diluting existing holders and inflicting losses on users who acquire the token late in this cycle. However, Lyra’s path to transitioning from inflationary rewards is clear. 
 
 The Avalon release will result in predictable liquidity and a capital-efficient trading experience, and should drive record volumes to the protocol. However, the cost of onboarding new users is attracting liquidity, which can risk the token falling into the spiral described above. The focus for this release should be on driving as much organic volume (integrations, traders, institutions) and establishing Lyra as the clear leader in on-chain options.
@@ -81,12 +81,12 @@ Following Avalon, engineering and development work will be dedicated to making t
 
 
 ### (2) Trading Rewards 
-#### Current
+#### **Current**
 Users are eligible for:
 - LYRA rebates on their fees paid 
 - An interest rate (paid in LYRA) on collateral posted to the AMM when selling options
 
-#### Proposal
+#### **Proposal**
 - Following the introduction of partial collateralization in Avalon, trading rewards will shift to a rebate only model. Where users are eligible for a LYRA rebate on their stablecoin fees paid on opening and closing trades. 
 - Fee rebates will be tiered
 - The Council can specify different rebate tier values per asset. This process can eventually be replaced by gauge voting. 
@@ -106,7 +106,7 @@ Here is an example of a potential rewards structure, assuming that the xLYRA bal
 | 1,000,000 |1.50 | 
 | 5,000,000 | 2.00 |
 
-#### Rationale
+#### **Rationale**
 Avalon will see the introduction of capital-efficient options selling. Therefore the protocol should cease paying extra rewards to options sellers. This reduces the dilution of existing token holders, and allows the community to accurately assess organic usage of the protocol in the absence of any incentives. 
 
 Rebates remain a useful way of rewarding power users of the protocol with governance rights. Further, since rebates are strictly worth less than the fees paid, wash trading/inorganic volume is not incentivized. 
@@ -115,10 +115,10 @@ There will be no cap on LYRA emissions via trading rebates, since emissions via 
 
 ### (3) LP Rewards 
 
-#### Current
+#### **Current**
 - Council sets LP rewards before a range of option market rounds. LPs deposit sUSD and receive unlocked LYRA rewards up front. 
 
-#### Proposal
+#### **Proposal**
 - Council sets a monthly rate of LP rewards to be distributed across all pools
 - Council determines the distribution of rewards across markets (e.g 45% ETH, 45% BTC, 10% LINK)
 - Reward rates should target a utilization rate across all pools of 60% NAV monthly
@@ -127,7 +127,7 @@ There will be no cap on LYRA emissions via trading rebates, since emissions via 
 xLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One xLYRA balance can be used to simultaneously boost multiple pools. 
 - LP rewards will be distributed in locked LYRA (into xLYRA) that is staked for 30 days (after which it will be redeemable for LYRA). This can be immediately relocked if desired. 
 
-#### Rationale
+#### **Rationale**
 The liquidity pool will remain fully collateralized in the Avalon release. The focus for v2 will be ripping out this backend and replacing it with a flexible, capital-efficient structure that could potentially support features like native spreads, straddles, strangles, and portfolio margin. Until then, inflationary rewards to LPs will be necessary to provide them with a base yield on their stablecoins, ensuring that there is adequate liquidity to onboard integration partners and supporting trader demand. 
 
 LP emission rates should be responsive to the utilization of the protocol: 
@@ -162,7 +162,7 @@ That is, a user's share of the xLYRA in the pool needs to be at least that of th
 If a user stakes xLYRA for only part of an epoch, then these quantities are multiplied by the fraction of the epoch they are active for. For instance, if a user only stakes xLYRA for half of the epoch, then _L_ in the above formula will be replaced with _0.5L_ and similarly for liquidity _M_.
 
 ### (4) Boosting Delegation
-#### Proposal
+#### **Proposal**
 xLYRA holders can delegate their LP rewards boost to other users. Note that boosting delegation will be enabled by the contracts but full functionality will not be explicitly built by the core team on launch, and will be introduced at a later stage. 
 
 - Users can delegate xLYRA for 2 discrete time intervals beginning at 4 and 8 weeks and counting down to 1 + 5 weeks before resetting.
@@ -173,7 +173,7 @@ xLYRA holders can delegate their LP rewards boost to other users. Note that boos
 - xLYRA can only be delegated according to the user’s xLYRA balance at the end of the delegation period. That is, if Bob has 50,000 xLYRA after locking LYRA for 8 weeks and wishes to delegate his LP boost for 4 weeks, he will have 25,000 xLYRA’s worth of boosts to delegate (since half his xLYRA balance will have decayed once 4 weeks has passed)
 - The delegation of trading boost xLYRA was considered, and will be a useful feature in time. However, we currently have not settled on a non-gameable implementation of rebate delegation, and as such leave this as an open ended consideration for the community. 
 
-#### Rationale
+#### **Rationale**
 
 xLYRA token holders could be a mix of: 
 - Long term aligned, active governance participants
@@ -188,13 +188,14 @@ Council vote delegation will not be natively supported. This is important to enc
 
 ### (5) USDC Security Module Rewards 
 
-**Current:** An annualized rate of 12,000,000 LYRA/year (1.2%) is allocated to the USDC security module. At time of writing this has attracted $29.25m USDC at a 10% APY, securing $40m in market TVL.  
+#### **Current:** 
+An annualized rate of 12,000,000 LYRA/year (1.2%) is allocated to the USDC security module. At time of writing this has attracted $29.25m USDC at a 10% APY, securing $40m in market TVL.  
 
-#### Proposal 
+#### **Proposal **
 Immediately reduce the annualized rate of rewards to 8,000,000/year (0.8%), targeting $20m USDC TVL and 50% coverage of the market pool TVL. 
 After the Avalon release has been live on mainnet for 3 months, the target market pool percentage coverage should fall to 25%. For example, if TVL remained at $40m USD, the reward rate should fall to 4,000,000 LYRA/year. 
 
-#### Rationale 
+#### **Rationale **
 An insurance fund for LPs is a necessary and important part of any DEX, however currently the coverage ($29.25m USDC securing $40m in options liquidity) is very high, suggesting that Lyra is overpaying for this fund.
 
 Further, in Avalon, the USDC security module will be eligible for a percentage of liquidation fees, which should increase the attractiveness of providing liquidity (and supplementing the Lyra rewards offered).  
