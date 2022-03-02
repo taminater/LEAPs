@@ -224,7 +224,7 @@ Whilst:
 - Not creating reflexive tokenomics dynamics via unsustainable staking/LP rewards
 - Not locking the protocol into a multi-year emissions plan that may be unsuited to the protocol’s goals in the future 
 
-## Points of Interest
+### Points of Interest
 Points of Interest
 
 1. What should the maximum lock time be for xLYRA? Consider:
