@@ -22,9 +22,9 @@ The Avalon release will represent an enormous step forward for the protocol, add
 - The ability to close a position at any time
 - A wider selection of strikes per expiry
 to the extensive suite of features Lyra currently offers, including: 
-- Buying/selling calls/puts 
-- Market leading spreads 
-- Always-on liquidity
+  1. Buying/selling calls/puts 
+  2. Market leading spreads 
+  3. Always-on liquidity
 
 This presents an opportunity to push Lyra’s markets and options as far as they can go via partnerships, integrations and trading volumes which match the standards set by the best options protocol in DeFi. The LYRA token is an ideal fit to accentuate this process, by incentivizing liquidity, trading activity, and rewarding long-term governance decisions.  
 
