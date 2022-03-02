@@ -10,6 +10,10 @@ created: 2022-03-01
 
 This LEAP proposes a new tokenomics framework to support the long term growth of the protocol with vote-locked xLYRA, revamped trading/LP rewards schemes and guidelines for liquidity incentives.  
 
+## Abstract
+
+This proposal introduces vote-locked LYRA (xLYRA) as the basic mechanic underpinning Lyra’s tokenomics. Users can lock LYRA for a maximum period of a year, receiving xLYRA in proportion to their time-lock length. xLYRA aims to align governance, traders and LPs over the long term by paying rewards to stakers, and boosting rewards for LPs and traders who carry xLYRA balances. The proposal also describes a framework for emission-rates, which are to be utilized by the council in determining future liquidity rewards.
+
 ## Motivation
 
 The Avalon release will represent an enormous step forward for the protocol, adding:
