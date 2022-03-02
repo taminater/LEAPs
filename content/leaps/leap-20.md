@@ -40,7 +40,8 @@ The vision for the token is as a gateway to Lyra governance, trading, and liquid
 
 ### Overview
 
-**Proposal:** LYRA holders can elect to lock their tokens for a period of up to 1 year. In return, they receive a linearly proportional balance of xLYRA which decays over time. 
+#### **Proposal:** 
+LYRA holders can elect to lock their tokens for a period of up to 1 year. In return, they receive a linearly proportional balance of xLYRA which decays over time. 
 
 xLYRA holders receive:
 - Governance rights: voting for the quarterly Council will be restricted to xLYRA holders and holders of escrowed LYRA 
