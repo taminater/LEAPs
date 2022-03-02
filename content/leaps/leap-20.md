@@ -8,6 +8,7 @@ created: 2022-03-01
 
 ## Simple Summary
 
+This LEAP proposes a new tokenomics framework to support the long term growth of the protocol with vote-locked xLYRA, revamped trading/LP rewards schemes and guidelines for liquidity incentives.  
 
 ## Motivation
 
