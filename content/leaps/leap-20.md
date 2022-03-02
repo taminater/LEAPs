@@ -38,7 +38,7 @@ The vision for the token is as a gateway to Lyra governance, trading, and liquid
 
 ## Specification 
 
-## Overview
+### Overview
 
 **Proposal:** LYRA holders can elect to lock their tokens for a period of up to 1 year. In return, they receive a linearly proportional balance of xLYRA which decays over time. 
 
