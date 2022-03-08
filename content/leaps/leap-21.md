@@ -72,7 +72,7 @@ These values will have to be re-calculated using the data from the Round ending 
 
 ### LYRA-ETH Token LPs (Pool2) 
 
-**Current:** 
+**LEAP-13:** 
 - DAO currently spending 65,000 LYRA/day (5m LYRA/2.5 months, 2.4% supply in 1 year) to attract a total of $6m in liquidity across Uniswap and SushiSwap
 - No target TVL
 
