@@ -64,11 +64,11 @@ In the latest round (beginning March 5th), the option market deposits totalled $
 | SOL | $4.96m | $2.31m | N/A | N/A | N/A | 
 
 **Rationale:** 
-The ETH market peaked in the last round (Feb 5-March4) at ~$8m in locked collateral + premiums with $27m in liquidity. Given $9m was reserved for delta hedging, this represents 42% of peak utilization in the pool. The new ETH market has $21m of liquidity, if the same trading volumes were to occur this round, this would be roughly ~57% of peak utilization. Given the peaks didn’t last long, and occurred just prior to each expiry, aiming for a peak utilization of ~70% seems reasonable which would imply targeting $17m in ETH market liquidity for the next round.
+- The ETH market peaked in the last round (Feb 5-March4) at ~$8m in locked collateral + premiums with $27m in liquidity. Given $9m was reserved for delta hedging, this represents 42% of peak utilization in the pool. The new ETH market has $21m of liquidity, if the same trading volumes were to occur this round, this would be roughly ~57% of peak utilization. Given the peaks didn’t last long, and occurred just prior to each expiry, aiming for a peak utilization of ~70% seems reasonable which would imply targeting $17m in ETH market liquidity for the next round.
 
-BTC market peaked at ~$2.9m in locked collateral + premiums on $10.25m TVL, representing peak utilization of 42% ($2.9m/$6.8m). Therefore target TVL for next round should be ~$6.2m 
+- BTC market peaked at ~$2.9m in locked collateral + premiums on $10.25m TVL, representing peak utilization of 42% ($2.9m/$6.8m). Therefore target TVL for next round should be ~$6.2m 
 
-LINK market peaked at ~$600,000 in locked collateral + premiums on $3.36m TVL, representing peak utilization of 26.7% (0.6m/2.24m). Therefore target TVL for next round should be $1.28m.
+- LINK market peaked at ~$600,000 in locked collateral + premiums on $3.36m TVL, representing peak utilization of 26.7% (0.6m/2.24m). Therefore target TVL for next round should be $1.28m.
 
 These values will have to be re-calculated using the data from the Round ending on April 1st, but the logic can remain the same. To calculate emissions for each pool, therefore, the council should assume that the APY required by LPs remains constant, and emit enough tokens to attract the target TVL. 
 
