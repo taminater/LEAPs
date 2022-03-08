@@ -40,8 +40,8 @@ A total of 6,000,000 LYRA was distributed over 77 days, split equally between US
 Both of these pools combined are insuring $35m in TVL (coverage ratio of 100% at current market LYRA value). 
 
 **Proposal:**
-Reduce the emissions rate for the USDC Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$10m in USDC liquidity
-Reduce the emissions rate for the LYRA Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$2.1m worth of LYRA. 
+- Reduce the emissions rate for the USDC Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$10m in USDC liquidity
+- Reduce the emissions rate for the LYRA Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$2.1m worth of LYRA. 
 
 ### LP Emissions
 
@@ -80,7 +80,7 @@ These values will have to be re-calculated using the data from the Round ending 
 - No target TVL
 
 **Proposal:** 
-- The LYRA DAO should maintain a base layer of liquidity on Uniswap v3, depositing ~$500,000 worth of of ETH and LYRA each, and using a managed Uniswap v3 contract (e.g. Gelato network) to ensure that the liquidity is active. 
+- The LYRA DAO should maintain a base layer of liquidity on Uniswap v3, depositing ~$500,000 worth of ETH and LYRA each, and using a managed Uniswap v3 contract (e.g. Gelato network) to ensure that the liquidity is active. 
 - Until infrastructure to support rewards accruing to a Gelato managed contract (i.e. front-end, specified contract), rewards for the Sushi pool (on L1) should cease with 3 day’s notice following the implementation of this LEAP. The Uniswap pool (on Optimism) rewards should be reduced to target 5,000,000 LYRA / year (or 13698 LYRA/day). At the current token price of $0.15, this should attract ~$2,400,000 of liquidity at the current Uniswap APY of 62%. LPs in the Uniswap pool should be advised that rewards will be very short term, pending the construction of the Gelato pool. 
 - When token trading volumes are high, the Council should be quick to increase rewards (no notice required) and decrease rewards when token trading volumes are low (requiring 48 hours notice). 
 - Once Gelato is ready to be deployed, the incentivized LYRA range for liquidity mining should be [0.25*spot, 2.5*spot], which should lead to roughly 2.25x capital efficiency gains relative to Uniswap v2. 
