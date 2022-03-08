@@ -43,6 +43,8 @@ Both of these pools combined are insuring $35m in TVL (coverage ratio of 100% at
 - Reduce the emissions rate for the USDC Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$10m in USDC liquidity
 - Reduce the emissions rate for the LYRA Security Module to 5,000,000 LYRA/year (35% of current) which, at current rates, should attract ~$2.1m worth of LYRA. 
 
+These changes should be effected as soon as possible, with enough notice given so that stakers can move funds around. In this case, the cooldown period (10 days) + 48 hours notice (12 days total). 
+
 ### LP Emissions
 
 **LEAP-13:** 
@@ -66,7 +68,7 @@ In the latest round (beginning March 5th), the option market deposits totalled $
 **Rationale:** 
 - The ETH market peaked in the last round (Feb 5-March4) at ~$8m in locked collateral + premiums with $27m in liquidity. Given $9m was reserved for delta hedging, this represents 42% of peak utilization in the pool. The new ETH market has $21m of liquidity, if the same trading volumes were to occur this round, this would be roughly ~57% of peak utilization. Given the peaks didn’t last long, and occurred just prior to each expiry, aiming for a peak utilization of ~70% seems reasonable which would imply targeting $17m in ETH market liquidity for the next round.
 
-- BTC market peaked at ~$2.9m in locked collateral + premiums on $10.25m TVL, representing peak utilization of 42% ($2.9m/$6.8m). Therefore target TVL for next round should be ~$6.2m 
+- BTC market peaked at ~$2.9m in locked collateral + premiums on $10.25m TVL, representing peak utilization of 42% ($2.9m/$6.8m). Therefore target TVL for next round should be ~$6.2m. 
 
 - LINK market peaked at ~$600,000 in locked collateral + premiums on $3.36m TVL, representing peak utilization of 26.7% (0.6m/2.24m). Therefore target TVL for next round should be $1.28m.
 
