@@ -47,17 +47,21 @@ Reduce the emissions rate for the LYRA Security Module to 5,000,000 LYRA/year (3
 
 **LEAP-13:** 
 A total of 12,000,000 LYRA over the 84 days (52,142,857/year or 5.1% of supply annually) was distributed to option market LPs with a target TVL of $50,000,000 
-In the latest round (beginning March 5th), the option market deposits totalled $37.1m. This totals roughly 28% APY across all pools (with a token price of $0.18). 
+In the latest round (beginning March 5th), the option market deposits totalled $37.1m. This totals roughly 21% APY across all pools (with a token price of $0.15). 
 
 **Proposal:**
-Immediately shift to the target utilization framework proposed for Avalon in LEAP-20. That is, increase/decrease rewards to target an average rolling monthly pool utilization of 60% NAV. This can be modified if the Council has good reason to expect volumes to be materially different from previous months (e.g. if Lyra is expecting a large integration partner to begin executing with the AMM rewards may need to be increased) 
+- Immediately shift to targeting a maximum of 70% peak utilization of non-delta hedging pool collateral (i.e. the high water mark for round capital usage is 70% of non-delta hedging funds). 
+- Rewards should increase if this target is exceeded in a given round, and decrease if not.
+- This will be replaced by the target utilization framework proposed for Avalon in LEAP-20, which sets a target rolling monthly utilization of 60% NAV. 
+- This can be modified if the Council has good reason to expect volumes to be materially different from previous months (e.g. if Lyra is expecting a large integration partner to begin executing with the AMM rewards may need to be increased) 
 
-| Options Market | Target TVL |
-| ----------- | ----------- |
-| ETH | $17m |
-| BTC | $6.2m |
-| LINK | $1.28m |
-| SOL | ? | 
+
+| Options Market | Current TVL | 70% Util Locked Collateral/Premiums | Util High Watermark (prev. round) | % of target | Proposed emissions change | 
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| ETH | $21.5m | $9.87m | $8m | 82% | -19% | 
+| BTC | $8.27m | $3.86m | $2.9m | 75% | -25% | 
+| LINK | $2.76m | $1.29m | $0.6m | 47% | -53%| 
+| SOL | $4.96m | $2.31m | N/A | N/A | N/A | 
 
 **Rationale:** 
 The ETH market peaked in the last round (Feb 5-March4) at ~$8m in locked collateral + premiums with $27m in liquidity. Given $9m was reserved for delta hedging, this represents 42% of peak utilization in the pool. The new ETH market has $21m of liquidity, if the same trading volumes were to occur this round, this would be roughly ~57% of peak utilization. Given the peaks didn’t last long, and occurred just prior to each expiry, aiming for a peak utilization of ~70% seems reasonable which would imply targeting $17m in ETH market liquidity for the next round.
@@ -67,7 +71,6 @@ BTC market peaked at ~$2.9m in locked collateral + premiums on $10.25m TVL, repr
 LINK market peaked at ~$600,000 in locked collateral + premiums on $3.36m TVL, representing peak utilization of 26.7% (0.6m/2.24m). Therefore target TVL for next round should be $1.28m.
 
 These values will have to be re-calculated using the data from the Round ending on April 1st, but the logic can remain the same. To calculate emissions for each pool, therefore, the council should assume that the APY required by LPs remains constant, and emit enough tokens to attract the target TVL. 
-
 
 
 ### LYRA-ETH Token LPs (Pool2) 
