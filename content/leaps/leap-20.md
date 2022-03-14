@@ -154,7 +154,7 @@ Let M be the amount of LP tokens a given user has received for providing liquidi
 
 \\[M_{e} = min(xM + (1-x)\frac{L}{L_{tot}} M_{tot}, M)\\]
 
-where \\(M_{tot})\\ is the total number of LP tokens issued from the pool, L is the amount of xLYRA staked by the user, \\(L_{tot})\\ is the total amount of xLYRA staked amongst pool LPs, and _x_ = 0.5 is a parameter. From the above formula, the minimum amount of xLYRA a user needs to obtain the maximum 2x boost is:
+where \\[(M_{tot})\\] is the total number of LP tokens issued from the pool, L is the amount of xLYRA staked by the user, \\[(L_{tot})\\] is the total amount of xLYRA staked amongst pool LPs, and _x_ = 0.5 is a parameter. From the above formula, the minimum amount of xLYRA a user needs to obtain the maximum 2x boost is:
 
 \\[L_{min} = L_{tot} \frac{M}{M_{tot}}\\]
 
