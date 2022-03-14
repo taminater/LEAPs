@@ -147,7 +147,7 @@ divided by the Net Asset Value (NAV) of the pool. The methodology for determinin
 60% is the proposed target pool utilization, since it strikes a balance between a high rate of capital usage whilst ensuring that traders will always have sufficient liquidity to open/close positions in turbulent market conditions. Target utilization should be measured by taking daily snapshots of the pool utilization and calculating a moving average per asset. 
 
 
-#### LP Rewards Boosting Implementation 
+#### **LP Rewards Boosting Implementation** 
 
 A user receives LP rewards based on their **effective liquidity** in a given pool. Effective liquidity is a function of the liquidity and xLYRA dedicated to a particular pool. This means that a LP can use xLYRA to boost their rewards. This boost will be capped at 2 times the original liquidity provided.
 Let M be the amount of LP tokens a given user has received for providing liquidity to an options pool. This user's effective liquidity \\(\M_{e})\\ is given by:
@@ -192,11 +192,11 @@ Council vote delegation will not be natively supported. This is important to enc
 #### **Current:** 
 An annualized rate of 12,000,000 LYRA/year (1.2%) is allocated to the USDC security module. At time of writing this has attracted $29.25m USDC at a 10% APY, securing $40m in market TVL.  
 
-#### **Proposal **
+#### **Proposal**
 Immediately reduce the annualized rate of rewards to 8,000,000/year (0.8%), targeting $20m USDC TVL and 50% coverage of the market pool TVL. 
 After the Avalon release has been live on mainnet for 3 months, the target market pool percentage coverage should fall to 25%. For example, if TVL remained at $40m USD, the reward rate should fall to 4,000,000 LYRA/year. 
 
-#### **Rationale **
+#### **Rationale**
 An insurance fund for LPs is a necessary and important part of any DEX, however currently the coverage ($29.25m USDC securing $40m in options liquidity) is very high, suggesting that Lyra is overpaying for this fund.
 
 Further, in Avalon, the USDC security module will be eligible for a percentage of liquidation fees, which should increase the attractiveness of providing liquidity (and supplementing the Lyra rewards offered).  
