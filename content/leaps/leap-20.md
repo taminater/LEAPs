@@ -152,11 +152,11 @@ divided by the Net Asset Value (NAV) of the pool. The methodology for determinin
 A user receives LP rewards based on their **effective liquidity** in a given pool. Effective liquidity is a function of the liquidity and xLYRA dedicated to a particular pool. This means that a LP can use xLYRA to boost their rewards. This boost will be capped at 2 times the original liquidity provided.
 Let M be the amount of LP tokens a given user has received for providing liquidity to an options pool. This user's effective liquidity \\(\M_{e})\\ is given by:
 
-\\[(M_{e}) = \texttt{min}(\texttt{xM} + (1-x)\frac{L/L_{tot})M_{tot}, M)\\]
+\\[(M_{e}) = \texttt{min(\texttt{xM} + (1-x)\frac{L/L_{tot}}M_{tot}, M)}\\]
 
 where \\(M_{tot})\\ is the total number of LP tokens issued from the pool, L is the amount of xLYRA staked by the user, \\(L_{tot})\\ is the total amount of xLYRA staked amongst pool LPs, and _x_ = 0.5 is a parameter. From the above formula, the minimum amount of xLYRA a user needs to obtain the maximum 2x boost is:
 
-\\[(L_{min}) = (L_{tot}) x (\frac{M}{M_{tot}})\\]
+\\[L_{min} = L_{tot} \frac{M}{M_{tot}}\\]
 
 That is, a user's share of the xLYRA in the pool needs to be at least that of their share of the liquidity in the pool to get the max boost. In other words, if a user has provided 10% of the LP tokens in a pool, to get the max boost, they must have at least 10% of the xLYRA dedicated to this pool. 
 
