@@ -93,10 +93,9 @@ Users are eligible for:
 - This percentage will be a continuous function of the amount of xLYRA auser has staked. Specifically, the percentage rebate R will be given by: \\[R = min(R_{max}, c + max(0, a(b + log(\frac{x}{d})))\\] where _x_ is a user's staked xLYRA and _a_, _b_, _c_, _d_ are parameters. The reward percentage _R_ will be capped at a fixed percentage \\(R_{max}\\). 
 - A preliminary choice of values is (\\(_a_, _b_, _c_, _d_, \R_{max}) = (4.5236, 10.39, 3, 5000000, 50%)\\) meaning thhe maximum rebate will be 50%. Using the formula, this max rebate can only be obtained if a user has at least 5M xLYRA staked. All users will receive atl east a 3% on fees paid. The choice of a logarithm function means that users with small amounts of xLYRA receive the vast majority of this rebate, making the benefits of holding xLYRA available to all holders. 
 - For example, a user with 10,000 xLYRA will have a rebate of 21.89% while a user with 1,000,000 xLYRA will have a rebate of 42.72%.
-- The Council can choose different parameters per asset and tweak the maximum rebate percentage \\R_{max}\\ (50% in the previous example). This can only be updated with 48 hours notice to the community. 
+- The Council can choose different parameters per asset and tweak the maximum rebate percentage \\(R_{max}\\) (50% in the previous example). This can only be updated with 48 hours notice to the community. 
 - This process can eventually be replaced by gauge voting.
-- Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For
-example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
+- Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
 - Strategic trading rewards targeting integration partners may be authorized by the Council. 
 - Trading rebates are to be distributed via fortnightly epochs, in the form of LYRA locked into xLYRA for 30 days.   
 
