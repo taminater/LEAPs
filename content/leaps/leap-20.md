@@ -98,7 +98,7 @@ Users are eligible for:
 - Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For
 example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
 - Strategic trading rewards targeting integration partners may be authorized by the Council. 
-- Trading rebates are to be distributed via monthly epochs, in the form of LYRA locked into xLYRA for 30 days.   
+- Trading rebates are to be distributed via fortnightly epochs, in the form of LYRA locked into xLYRA for 30 days.   
 
 #### **Rationale**
 Avalon will see the introduction of capital-efficient options selling. Therefore the protocol should cease paying extra rewards to options sellers. This reduces the dilution of existing token holders, and allows the community to accurately assess organic usage of the protocol in the absence of any incentives. 
