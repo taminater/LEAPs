@@ -96,6 +96,7 @@ Users are eligible for:
 - The Council can choose different parameters per asset and tweak the maximum rebate percentage \\(R_{max}\\) (50% in the previous example). This can only be updated with 48 hours notice to the community. 
 - This process can eventually be replaced by gauge voting.
 - Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
+- Rewards will also be capped to 3,000,000/LYRA per fortnightly epoch as a safety measure. If the cap is reached, rewards are to be distributed to traders in proportion to their eligible LYRA rewards, as is currently the case with trading rewards. 
 - Strategic trading rewards targeting integration partners may be authorized by the Council. 
 - Trading rebates are to be distributed via fortnightly epochs, in the form of LYRA locked into xLYRA for 30 days.   
 
