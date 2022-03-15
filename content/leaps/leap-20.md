@@ -89,23 +89,16 @@ Users are eligible for:
 
 #### **Proposal**
 - Following the introduction of partial collateralization in Avalon, trading rewards will shift to a rebate only model. Where users are eligible for a LYRA rebate on their stablecoin fees paid on opening and closing trades. 
-- Fee rebates will be tiered
-- The Council can specify different rebate tier values per asset. This process can eventually be replaced by gauge voting. 
-- The Council will be responsible for setting the baseline rebate (in terms of X LYRA per $1 in fees paid). This can only be updated with 48 hours notice to the community or if the LYRA price on one of the top two most liquid DEX venues (by TVL) would make a rebate profitable to wash trade (i.e. rebate per $1 of fees paid exceeds $1).
-- Rebates will be paid in LYRA and must be substantially less than $1 worth of LYRA per $1 in fees paid, to prevent wash trading. As such, there will be a hard cap of $0.75 worth of LYRA per $1 in fees paid (based on uniswap twap price)
+- Fee rebates will be paid out as a percentage of trading fees. For instance, a trade involving $40 of fees may receive a 25% rebate ($10) paid out in LYRA.
+- This percentage will be a continuous function of the amount of xLYRA auser has staked. Specifically, the percentage rebate R will be given by: \\[R = min(R_{max}, c + max(0, a(b + log(\frac{x}{d})))\\] where _x_ is a user's staked xLYRA and _a_, _b_, _c_, _d_ are parameters. The reward percentage _R_ will be capped at a fixed percentage R_{max}. 
+- A preliminary choice of values is \\(_a_, _b_, _c_, _d_, \R_{max}) = (4.5236, 10.39, 3, 5000000, 50%)\\ meaning thhe maximum rebate will be 50%. Using the formula, this max rebate can only be obtained if a user has at least 5M xLYRA staked. All users will receive atl east a 3% on fees paid. The choice of a logarithm function means that users with small amounts of xLYRA receive the vast majority of this rebate, making the benefits of holding xLYRA available to all holders. 
+- For example, a user with 10,000 xLYRA will have a rebate of 21.89% while a user with 1,000,000 xLYRA will have a rebate of 42.72%.
+- The Council can choose different parameters per asset and tweak the maximum rebate percentage \\R_{max}\\ (50% in the previous example). This can only be updated with 48 hours notice to the community. 
+- This process can eventually be replaced by gauge voting.
+- Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For
+example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
 - Strategic trading rewards targeting integration partners may be authorized by the Council. 
-- Trading rebates are distributed immediately, in the form of unlocked LYRA 
-Here is an example of a potential rewards structure, assuming that the xLYRA balance is read at the time of trade execution:  
-
-| Minimum xLYRA Balance  | LYRA rebate per $1 fees paid |
-| ----------- | ----------- | 
-| 1,000 | 0.25 |
-| 5,000 | 0.50 |
-| 20,000 | 0.75 |
-| 100,000 | 1.00 | 
-| 500,000 | 1.25 |
-| 1,000,000 |1.50 | 
-| 5,000,000 | 2.00 |
+- Trading rebates are to be distributed via monthly epochs, in the form of LYRA locked into xLYRA for 30 days.   
 
 #### **Rationale**
 Avalon will see the introduction of capital-efficient options selling. Therefore the protocol should cease paying extra rewards to options sellers. This reduces the dilution of existing token holders, and allows the community to accurately assess organic usage of the protocol in the absence of any incentives. 
