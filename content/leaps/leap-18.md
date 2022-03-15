@@ -188,10 +188,13 @@ The minimum amount of collateral is given by:
 - (short puts in the quote asset): \\(\max(\texttt{min_static_quote},BS(\texttt{ShockVol},K,S\times
   \texttt{PutShock},r,T))\\)
 
-where \\(\texttt{ShockVol}\\) is a static shocked trading volatility, \\(\texttt{CallShock}\\) and \\(
+where \\(\texttt{ShockVol} = \texttt{ShockVolA} = 2.5\\)  if \\(\texttt{Time_to_Expiry} < T_A = 4\\) weeks, \\(\texttt{ShockVol} = \texttt{ShockVolB} = 1.8\\)  if \\(\texttt{Time_to_Expiry} > T_B = 8\\) weeks and
+\\[
+\texttt{ShockVol} = \texttt{ShockVolA} - \frac{\texttt{ShockVolA} - \texttt{ShockVolB}}{T_{A} - T_{B}} \times (\texttt{Time_to_Expiry} - T_{A})
+\\]
+when \\(T_{A} \le \texttt{Time_to_Expiry} \le T_{B})\\). \\(\texttt{CallShock}\\) and \\(
 \texttt{PutShock}\\) are static percentage shocks to the current spot price and \\(
-\texttt{min_static_base},\texttt{min_static_quote}\\) are the minimum deposits necessary to ensure liquidators (
-described below) can always operate profitably.
+\texttt{min_static_base},\texttt{min_static_quote}\\) are the minimum deposits necessary to ensure liquidators (described below) can always operate profitably.
 
 These values will be unique to each asset, but for ETH, preliminary values could be \\(\texttt{ShockVol}=250\\%\\), \\(
 \texttt{CallShock}=120 \\%\\), \\(\texttt{PutShock}=80\\%\\), \\(\texttt{min_static_base}=0.2\\) ETH and \\(
@@ -235,7 +238,7 @@ the AMM, meaning that the AMM can internalize the bulk of the fees from liquidat
 collateral risk).
 
 When a position is liquidated, the AMM sells back the options using the \\(\texttt{ForceClose()}\\) function but with
-slightly different parameters. An option is sold back to the trader at  
+slightly different parameters. An option is sold back to the trader at
 \\[
 \texttt{Liq_sell_back} = \max(qS + \texttt{Parity}, BS(\texttt{liq_short_penalty} \times \sigma^{GWAV})
 \\]
@@ -288,6 +291,38 @@ To improve the composability of Lyra, all options positions will be represented 
 be able to transfer their option positions to any address. Consequently, users can open two positions for the same
 listing with different collateral amounts and each would be liquidated separately, allowing users to divide risk. This
 also means collateral checks will not have to be performed on transferred short positions.
+
+### Configurable Values
+| Name | Symbol | Value |
+| ---- | ------ | ----- |
+| Delta Cutoff (Close()) | - | 10 |
+Delta Cutoff (ForceClose()) | - | 12 |
+Trading Cutoff Time | \\(\texttt{Cutoff}\\) | 6 hours |
+Long GWAV Vol Penalty | \\(\texttt{long_penalty}\\) | 0.8, 0.5 (depending on \\(\texttt{Time_to_Expiry}\\)) |
+Short GWAV Vol Penalty | \\(\texttt{short_penalty}\\) | 1.2, 1.5 (depending on \\(\texttt{Time_to_Expiry}\\)) |
+Min Option Price (fraction of spot) | \\(q\\) | 0.01 |
+Min baseline vol | - | 0.25 |
+Max baseline vol | - | 5.0 |
+Min skew | - | 0.8 |
+Max skew | - | 1.75 |
+Min trading vol| - | 0.2|
+Max trading vol| - | 8.75|
+Min skew in GWAV| \\(z\\) | 0.6|
+Max Shock Volatility | \\(\texttt{ShockVolA}\\) | 2.5 (ETH/BTC), 4.0 (LINK/SOL)|
+Min Shock Volatility | \\(\texttt{ShockVolB}\\) | 1.8 (ETH/BTC), 3.2 (LINK/SOL)|
+First Shock Point | \\(T_{A}\\) | 4 weeks|
+Second Shock Point | \\(T_{B}\\) | 8 weeks|
+Call Shock Spot Percent | \\(\texttt{CallShock}\\) | 1.2|
+Put Shock Spot Percent | \\(\texttt{PutShock}\\) | 0.8|
+Min Quote Collateral | \\(\texttt{min_static_quote}\\) | $300|
+Min Base Collateral | \\(\texttt{min_static_base}\\) | 0.15 ETH, 0.01 BTC, 35 LINK, 55 SOL|
+Liquidation Vol Penalty | \\(\texttt{liq_short_penalty}\\) | 1.15, 1.45 (depending on \\(\texttt{Time_to_Expiry}\\))|
+Flat Penalty | \\(\texttt{flat_penalty}\\) | $15|
+Slashed Collateral Percentage | \\(\texttt{penalty}\\) | 10%|
+Fee Scale Time 1 | \\(T_{1}\\) | 8 weeks|
+Fee Scale Time 2 | \\(T_{2}\\) | 12 weeks|
+Option Price Coefficient | \\(\texttt{OptionPriceFeeCoefficient}\\) |1%|
+Spot Price Coefficient | \\(\texttt{SpotPriceFeeCoefficient}\\) |0.1%|
 
 ## Copyright
 

@@ -196,5 +196,12 @@ Liquidity Circuit Breaker Cooldown | \\(\tau_{liq}\\) | 3 days |
 Volatility Circuit Breaker Cooldown | \\(\tau_{vol}\\) | \\(2\times \mathcal{T}\\) hours |
 Guardian bypass timer | \\(G\\) | 14 days |
 
+### Addendum to Leap 16
+After LEAP 16 was passed, it was discovered that there was a potential exploit involving the liquidity buckets per expiry. These have since been removed from the code. To disincentivize excessive trading on long dated expiries, the option and spot fees will be increased for long dated options.
+
+Let \\(\texttt{Fee_Scale} = 1 \\) when \\(\texttt{Time_to_Expiry} < T_1 = 8\\) weeks. At \\(T_2 = 12 \\) weeks, \\(\texttt{Fee_Scale} = 2 \\). For \\(t \ge T_1\\), \\(\texttt{Fee_Scale}\\) increases linearly. The two fixed timestamps \\(T_1\\) and \\(T_2\\) must be at least 1 week apart. Choosing different timestamps increases \\(\texttt{Fee_Scale}\\) for longer dated expiries. For example, if \\((T_{1}, T_{2}) = (6,10)\\), then at 12 weeks, \\(\texttt{Fee_Scale} = 2.5\\).
+
+The parameters \\(\texttt{optionPriceFeeCoefficient}\\) and \\(\texttt{spotPriceFeeCoefficient}\\) (see the white paper for more detail) are both scaled by \\(\texttt{Fee_Scale}\\), meaning longer dated expiries pay more fees.
+
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
