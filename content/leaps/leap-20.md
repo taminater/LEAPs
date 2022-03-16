@@ -105,8 +105,6 @@ Avalon will see the introduction of capital-efficient options selling. Therefore
 
 Rebates remain a useful way of rewarding power users of the protocol with governance rights. Further, since rebates are strictly worth less than the fees paid, wash trading/inorganic volume is not incentivized. 
 
-There will be no cap on LYRA emissions via trading rebates, since emissions via trading rebates are strictly less than fees paid. Fees are also a relatively small percentage of volumes through the protocol, which are already constrained by the size of the liquidity pool. Therefore, it is almost certain that any emissions via trading rebates will be smaller than LP emissions by an order of magnitude. 
-
 ### (3) LP Rewards 
 
 #### **Current**
