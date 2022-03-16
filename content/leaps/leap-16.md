@@ -45,7 +45,7 @@ In the following, all parameters are preliminary values that are subject to chan
 
 ### Rationale
 
-TBA
+Given the complexity of the design of this LEAP, the rationale and trade-offs are addressed in each component in the technical specification below.
 
 ### Technical Specification
 
