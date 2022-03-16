@@ -62,7 +62,7 @@ further testing. A future LEAP will specify the initial values at launch and the
 
 ### Rationale
 
-TBA
+Given the complexity of the design of this LEAP, the rationale and trade-offs are addressed in each component in the technical specification below.
 
 ### Technical Specification: Universal Closing
 
