@@ -101,4 +101,9 @@ N/A
 
 ## Configurable Values
 - Proposed range for liquidity: \\((0.2spot, 5spot)\\) where _spot_ is the LYRA price on program launch (April 1st)
-- Annual LYRA Rewards to v3 pool: 10,000,000 LYRA / year
+- Annual Rewards to Uniswap v3 pool (on Optimistic Ethereum, in Gelato contract): 10,000,000 LYRA / year
+- Annual Rewards to Sushiswap pool on L1: 0 (deprecated)
+- USDC Security Module emissions rate: 5,000,000 LYRA / year 
+- LYRA Security Module emissions rate: 0 (deprecated)
+- Liquidity Pool Utilization target: 60%
+
