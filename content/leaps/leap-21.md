@@ -83,16 +83,22 @@ These values will have to be re-calculated using the data from the Round ending 
 
 **Proposal:** 
 - The LYRA DAO should maintain a base layer of liquidity on Uniswap v3, depositing ~$500,000 worth of ETH and LYRA each, and using a managed Uniswap v3 contract (e.g. Gelato network) to ensure that the liquidity is active. 
-- Until infrastructure to support rewards accruing to a Gelato managed contract (i.e. front-end, specified contract), rewards for the Sushi pool (on L1) should cease with 3 day’s notice following the implementation of this LEAP. The Uniswap pool (on Optimism) rewards should be reduced to target 5,000,000 LYRA / year (or 13698 LYRA/day). At the current token price of $0.15, this should attract ~$2,400,000 of liquidity at the current Uniswap APY of 62%. LPs in the Uniswap pool should be advised that rewards will be very short term, pending the construction of the Gelato pool. 
-- When token trading volumes are high, the Council should be quick to increase rewards (no notice required) and decrease rewards when token trading volumes are low (requiring 48 hours notice). 
-- Once Gelato is ready to be deployed, the incentivized LYRA range for liquidity mining should be [0.25*spot, 2.5*spot], which should lead to roughly 2.25x capital efficiency gains relative to Uniswap v2. 
+- Until infrastructure to support rewards accruing to a Gelato managed contract (i.e. front-end, specified contract), rewards for the Sushi pool (on L1) should cease on April 1st, as per LEAP-13. Following April 1st, the Uniswap pool rewards (on Optimism) should be reduced to target 10,000,000 LYRA / year (or 27397 LYRA/day). 
+- LP rewards should only accrue to Uni LPs whose liquidity is in Gelato pool contract with a specfied liquidity range of (0.2x, 5.0x) of the token spot price on April 1st. This should yield ~1.8x more capital efficiency per $1 of liquidity in the pool. 
 - This range can be updated at the earliest of [once per month, 50% change in the spot price from last update], with a minimum notice of 24 hours from the Council to LPs. Should the price of LYRA fall outside of the incentivized range, the Council can update the incentivized range immediately. 
+- Once there is an audited Uniswap native staking contract + front end, the Council should be quick to migrate the program to said contract. 
+- When token trading volumes are high, the Council should be quick to increase rewards (no notice required) and decrease rewards when token trading volumes are low (requiring 48 hours notice). 
 - Tighter ranges can also be incentivized by Council if desired, for greater capital efficiency. 
 
 **Rationale:**
 There will be periods throughout the year where the spotlight will be off Lyra and required token liquidity is minimal. There will also be times where the need for liquidity will be very high, and required liquidity in the pools should rise. The pool2 is arguably the biggest source of token emissions for the lowest benefit for the protocol, and therefore should be managed carefully. 
-- A Uniswap v3 range covering +- 50% from current spot price offers a 414% improvement in capital efficiency relative to Uniswap v2 (https://uniswap.org/blog/uniswap-v3) . At time of writing, the Lyra DAO is emitting an annualized rate of ~24,000,000 tokens (2.4% supply) to attract $6m across Sushiswap (L1) and full-range Uniswap v3 (effectively Uniswap v2) on L2. 
-- As an example, $6m of total liquidity (ETH + LYRA) on Uniswap could be matched by the DAO with $1.44m worth of ETH and LYRA combined (or $720,000 of each), instead of paying out 24,000,000 LYRA ($3.6m at current price) in annual rewards for this liquidity. 
+- A Uniswap v3 range of (0.2, 5x) current spot offers a ~180% improvement in capital efficiency relative to Uniswap v2 (https://uniswap.org/blog/uniswap-v3). 
+- At time of writing, the Lyra DAO is emitting an annualized rate of ~24,000,000 tokens (2.4% supply) to attract $6m across Sushiswap (L1) and full-range Uniswap v3 (effectively Uniswap v2) on L2. 
+- As an example, $6m of total liquidity (ETH + LYRA) on Uniswap v2 could be matched by incentivizing $3.33m of liquidity on v3. This gives us the ability to significantly reduce LYRA rewards paid to LPs, whilst preserving most of the existing token liquidity.
 
 ## Test Cases
 N/A
+
+## Configurable Values
+- Proposed range for liquidity: \\[(0.2spot, 5spot)\\] where _spot_ is the LYRA price on program launch (April 1st)
+- Annual LYRA Rewards to v3 pool: 10,000,000 LYRA / year
