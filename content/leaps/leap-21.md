@@ -100,5 +100,5 @@ There will be periods throughout the year where the spotlight will be off Lyra a
 N/A
 
 ## Configurable Values
-- Proposed range for liquidity: \\[(0.2spot, 5spot)\\] where _spot_ is the LYRA price on program launch (April 1st)
+- Proposed range for liquidity: \\((0.2spot, 5spot)\\) where _spot_ is the LYRA price on program launch (April 1st)
 - Annual LYRA Rewards to v3 pool: 10,000,000 LYRA / year
