@@ -53,7 +53,7 @@ In the latest round (beginning March 5th), the option market deposits totalled $
 
 **Proposal:**
 - Immediately shift to targeting a maximum of 70% peak utilization of non-delta hedging pool collateral (i.e. the high water mark for round capital usage is 70% of non-delta hedging funds). 
-- Peak utilization is defined by: \\[max(\frac{lockedCollat + netPremium}{2/3 * TVL})\\] where _lockedCollat_ is equal to the amount of sUSD locked against puts and converted into sBase to collateralize calls. _netPremium_ is the amount the AMM has collected from selling options minus the amount paid to purchase options. The maximum is evaluated over the entirety of the previous round. 
+- Peak utilization is defined as: \\[max(\frac{lockedCollat + netPremium}{2/3 * TVL})\\] where _lockedCollat_ is equal to the amount of sUSD locked against puts and converted into sBase to collateralize calls. _netPremium_ is the amount the AMM has collected from selling options minus the amount paid to purchase options. The maximum is evaluated over the entirety of the previous round. 
 - Rewards should increase if this target is exceeded in a given round, and decrease if not.
 - This will be replaced by the target utilization framework proposed for Avalon in LEAP-20, which sets a target rolling monthly utilization of 60% NAV. 
 - This can be modified if the Council has good reason to expect volumes to be materially different from previous months (e.g. if Lyra is expecting a large integration partner to begin executing with the AMM rewards may need to be increased) 
