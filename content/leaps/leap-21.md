@@ -83,7 +83,8 @@ These values will have to be re-calculated using the data from the Round ending 
 
 **Proposal:** 
 - The LYRA DAO should maintain a base layer of liquidity on Uniswap v3, depositing ~$500,000 worth of ETH and LYRA each, and using a managed Uniswap v3 contract (e.g. Gelato network) to ensure that the liquidity is active. 
-- Until infrastructure to support rewards accruing to a Gelato managed contract (i.e. front-end, specified contract), rewards for the Sushi pool (on L1) should cease on April 1st, as per LEAP-13. Following April 1st, the Uniswap pool rewards (on Optimism) should be reduced to target 10,000,000 LYRA / year (or 27397 LYRA/day). 
+- Rewards for the L1 Sushiswap pool should cease on April 1st, as per LEAP-13. It will be deprecated.
+- Following April 1st, the Uniswap pool rewards (on Optimism) should be reduced to target 10,000,000 LYRA / year (or 27397 LYRA/day). Until the relevant infrastructure is built to support rewards accruing to the Uniswap-native v3 staking contract (i.e. front-end, audited contract), rewards should accrue to a Gelato managed contract. 
 - LP rewards should only accrue to Uni LPs whose liquidity is in Gelato pool contract with a specfied liquidity range of (0.2x, 5.0x) of the token spot price on April 1st. This should yield ~1.8x more capital efficiency per $1 of liquidity in the pool. 
 - This range can be updated at the earliest of [once per month, 50% change in the spot price from last update], with a minimum notice of 24 hours from the Council to LPs. Should the price of LYRA fall outside of the incentivized range, the Council can update the incentivized range immediately. 
 - Once there is an audited Uniswap native staking contract + front end, the Council should be quick to migrate the program to said contract. 
