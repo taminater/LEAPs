@@ -47,7 +47,7 @@ xLYRA holders receive:
 - Governance rights: voting for the quarterly Council will be restricted to xLYRA holders and holders of escrowed LYRA 
 - Inflationary rewards 
 - Boosts to liquidity provision rewards (for option market pools) of up to 2x
-- Trading rewards (rebates only)
+- Trading rewards 
 
 xLYRA:
 - Will be non-transferable
