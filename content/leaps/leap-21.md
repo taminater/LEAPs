@@ -106,6 +106,6 @@ N/A
 - Annual Rewards to Uniswap v3 pool (on Optimistic Ethereum, in Gelato contract): 10,000,000 LYRA / year
 - Annual Rewards to Sushiswap pool on L1: 0 (deprecated)
 - USDC Security Module emissions rate: 5,000,000 LYRA / year 
-- LYRA Security Module emissions rate: 0 (deprecated)
+- LYRA Security Module emissions rate: 5,000,000 LYRA / year (to be deprecated following the launch of xLYRA staking, as outlined in LEAP-20)
 - Liquidity Pool Utilization target: 60%
 
