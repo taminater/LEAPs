@@ -1,7 +1,7 @@
 ---
 leap: 22
 title: Launch AAVE Market
-status: Draft
+status: Proposed
 author: KSett
 created: 2022-4-7
 ---
