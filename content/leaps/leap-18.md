@@ -403,7 +403,10 @@ Spot Price Coefficient | \\(\texttt{SpotPriceFeeCoefficient}\\) |0.1%|
   struct MinCollateralParameters {
     uint minStaticQuoteCollateral;
     uint minStaticBaseCollateral;
-    uint shockVol;
+    uint shockVolA;
+    uint shockVolPointA;
+    uint shockVolB;
+    uint shockVolPointB;
     uint callSpotPriceShock;
     uint putSpotPriceShock;
   }
@@ -431,6 +434,18 @@ Spot Price Coefficient | \\(\texttt{SpotPriceFeeCoefficient}\\) |0.1%|
     uint maxVol;
     uint absMinSkew;
     uint absMaxSkew;
+  }
+
+  struct VarianceFeeParameters {
+    uint defaultVarianceFeeCoefficient;
+    uint forceCloseVarianceFeeCoefficient;
+    uint skewAdjustmentCoefficient;
+    uint referenceSkew;
+    uint minimumStaticSkewAdjustment;
+    uint vegaCoefficient;
+    uint minimumStaticVega;
+    uint ivVarianceCoefficient;
+    uint minimumStaticIvVariance;
   }
 ```
 
