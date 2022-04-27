@@ -324,6 +324,132 @@ Fee Scale Time 2 | \\(T_{2}\\) | 12 weeks|
 Option Price Coefficient | \\(\texttt{OptionPriceFeeCoefficient}\\) |1%|
 Spot Price Coefficient | \\(\texttt{SpotPriceFeeCoefficient}\\) |0.1%|
 
+## Interfaces
+
+### OptionMarket
+```solidity
+
+  struct TradeInputParameters {
+    uint strikeId;
+    uint positionId;
+    uint iterations;
+    OptionType optionType;
+    uint amount;
+    uint setCollateralTo;
+    uint minTotalCost;
+    uint maxTotalCost;
+  }
+
+  function openPosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function closePosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function forceClosePosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function addCollateral(uint positionId, uint amountCollateral) external
+
+  function liquidatePosition(uint positionId, address rewardBeneficiary) external
+```
+
+### OptionToken
+```solidity
+  enum PositionState {
+    EMPTY,
+    ACTIVE,
+    CLOSED,
+    LIQUIDATED,
+    SETTLED,
+    MERGED
+  }
+
+  struct OptionPosition {
+    uint positionId;
+    uint strikeId;
+    OptionMarket.OptionType optionType;
+    uint amount;
+    uint collateral;
+    PositionState state;
+  }
+
+  function canLiquidate(
+    OptionPosition memory position,
+    uint expiry,
+    uint strikePrice,
+    uint spotPrice
+  ) public view returns (bool)
+
+  function getOptionPositions(uint[] memory positionIds) 
+    external view returns (OptionPosition[] memory)
+```
+
+### OptionGreekCache
+```solidity
+  struct ForceCloseParameters {
+    uint ivGWAVPeriod;
+    uint skewGWAVPeriod;
+    uint shortVolShock;
+    uint shortPostCutoffVolShock;
+    uint longVolShock;
+    uint longPostCutoffVolShock;
+    uint liquidateVolShock;
+    uint liquidatePostCutoffVolShock;
+    uint shortSpotMin;
+    uint liquidateSpotMin;
+  }
+
+  struct MinCollateralParameters {
+    uint minStaticQuoteCollateral;
+    uint minStaticBaseCollateral;
+    uint shockVolA;
+    uint shockVolPointA;
+    uint shockVolB;
+    uint shockVolPointB;
+    uint callSpotPriceShock;
+    uint putSpotPriceShock;
+  }
+
+  function getMinCollateral(
+    OptionMarket.OptionType optionType,
+    uint strikePrice,
+    uint expiry,
+    uint spotPrice,
+    uint amount
+  ) external view returns (uint) 
+```
+
+### OptionMarketPricer
+```solidity
+  struct TradeLimitParameters {
+    int minDelta;
+    int minForceCloseDelta;
+    uint tradingCutoff;
+    uint minBaseIV;
+    uint maxBaseIV;
+    uint minSkew;
+    uint maxSkew;
+    uint minVol;
+    uint maxVol;
+    uint absMinSkew;
+    uint absMaxSkew;
+  }
+
+  struct VarianceFeeParameters {
+    uint defaultVarianceFeeCoefficient;
+    uint forceCloseVarianceFeeCoefficient;
+    uint skewAdjustmentCoefficient;
+    uint referenceSkew;
+    uint minimumStaticSkewAdjustment;
+    uint vegaCoefficient;
+    uint minimumStaticVega;
+    uint ivVarianceCoefficient;
+    uint minimumStaticIvVariance;
+  }
+```
+
+
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
