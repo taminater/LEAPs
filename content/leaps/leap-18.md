@@ -57,8 +57,7 @@ This LEAP will be split into two sections: the first introduces Universal closin
 function. This allows for users to close very ITM/OTM positions. The second section introduces partially collateralized
 shorts, meaning traders shorting options will have to put up substantially less collateral than in V1.
 
-In the following, all parameters are configurable and values specified may change before mainnet deployment subject to
-further testing. A future LEAP will specify the initial values at launch and the justification behind each choice.
+In the following, all parameters are configurable and values specified may change before mainnet deployment subject to further testing. Parameters will be set by the core contributors and these choices will be communicated to the community via the Avalon docs.
 
 ### Rationale
 
@@ -190,7 +189,7 @@ The minimum amount of collateral is given by:
 
 where \\(\texttt{ShockVol} = \texttt{ShockVolA} = 2.5\\)  if \\(\texttt{Time_to_Expiry} < T_A = 4\\) weeks, \\(\texttt{ShockVol} = \texttt{ShockVolB} = 1.8\\)  if \\(\texttt{Time_to_Expiry} > T_B = 8\\) weeks and
 \\[
-\texttt{ShockVol} = \texttt{ShockVolA} - \frac{\texttt{ShockVolA} - \texttt{ShockVolB}}{T_{A} - T_{B}} \times (\texttt{Time_to_Expiry} - T_{A})
+\texttt{ShockVol} = \texttt{ShockVolA} - \frac{\texttt{ShockVolA} - \texttt{ShockVolB}}{T_{B} - T_{A}} \times (\texttt{Time_to_Expiry} - T_{A})
 \\]
 when \\(T_{A} \le \texttt{Time_to_Expiry} \le T_{B})\\). \\(\texttt{CallShock}\\) and \\(
 \texttt{PutShock}\\) are static percentage shocks to the current spot price and \\(
@@ -291,6 +290,17 @@ To improve the composability of Lyra, all options positions will be represented 
 be able to transfer their option positions to any address. Consequently, users can open two positions for the same
 listing with different collateral amounts and each would be liquidated separately, allowing users to divide risk. This
 also means collateral checks will not have to be performed on transferred short positions.
+
+### Technical Specification: Variance fee
+
+Periods of extreme turbulence in the market should attract higher fees since the AMM is exposed to greater risk and impermanent loss. Such a fee will also further decrease the possibility of the volatility surface being manipulated. For this reason, we propose including a new fee which we call the variance fee.
+
+The variance fee \\(F_{var}\\) will be defined as 
+\\[
+F_{var}=c_{0}\times(v_{0}+v_{1}\times\text{Vega})\times(s_{0}+s_{1}\left|R_{fix}-R\right|)\times(b_{0}+b_{1}\times\left|b^{GWAV}-b^{Spot}\right|)
+\\]
+
+where \\(c_{0},v_{i},s_{i},b_{i},R_{fix}\\) are constants, \\(\text{Vega}\\) is the vega of the trade, \\(R\\) is the skew of the trade and \\(b^{Spot},b^{GWAV}\\) are the spot/GWAV of the baseline volatilities. Essentially, the variance fee will increase for trades that cause the base volatility to deviate significantly from the GWAV.
 
 ### Configurable Values
 | Name | Symbol | Value |
