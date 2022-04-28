@@ -10,12 +10,12 @@ created: 2022-04-22
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Bootstrap liquidity in Lyra pool on Bancor and fund pool with DAO owned LYRA tokens.
+Fund Lyra pool on Bancor with DAO owned LYRA tokens.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-This LEAP proposes Lyra DAO creates and funds liquidity in a LYRA pool on Bancor. The Lyra DAO will purchase BNT to bootstrap the pool initially and then add LYRA tokens to the pool to seed its liquidity.
+This LEAP proposes Lyra DAO funds liquidity in the LYRA pool on Bancor. The Lyra DAO will add LYRA tokens to the pool to seed its liquidity.
 
 
 ## Motivation
@@ -40,25 +40,18 @@ Bancor provides an excellent solution for protocol owned, L1 liquidity with zero
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-By creating our own LYRA/BNT pool, we can offer consistent liquidity on L1 without paying emissions for the liquidity or using a bonding discount. We can avoid mercenary capital that will farm and dump our token and protect DAO funds from losses with Bancor’s IL protection. Bancor V3 will be available in approximately 6 weeks and will shorten the IL protection window to 7 days. Once V3 is available, the Lyra DAO will migrate the pool's liquidity over at the council's discretion while maintaining IL protection.
+By funding our own LYRA/BNT pool, we can offer consistent liquidity on L1 without paying emissions for the liquidity or using a bonding discount. We can avoid mercenary capital that will farm and dump our token and protect DAO funds from losses with Bancor’s IL protection. Bancor V3 will be available in approximately 6 weeks and will shorten the IL protection window to 7 days. Once V3 is available, the Lyra DAO will migrate the pool's liquidity over at the council's discretion while maintaining IL protection.
 
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Lyra currently exposes or the creations of new ones.-->
 
-Purchase BNT
-Lyra DAO to purchase 1500 $BNT ($2.24 at the time of writing, $3,360 in notional value)
-Bootstrap LYRA/BNT Pool -
-Lyra Pool
-Introduce LYRA price at the moment of staking
-Choose 1,500 BNT, the LYRA amount should fill automatically, and then stake.
 Deposit Lyra
-Once the pool is formed, Lyra will deposit LYRA into the pool up to the limit of 100,000 BNT ($224,000 in notional value currently)
-The bootstrapping stake of $BNT can be removed if the DAO chooses, and is NOT protected against IL.
+Lyra's DAO will deposit LYRA into the pool up to the limit of 100,000 BNT ($224,000 in notional value currently)
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for LEAPs but can be included with the implementation..-->
-Over 30 DAOs have adopted Bancor’s single sided staking for their treasury management.
+Over 30 DAOs [https://blog.bancor.network/nexus-mutual-joins-30-daos-adopting-bancors-dao-treasury-management-solution-2eb60b762259] have adopted Bancor’s single sided staking for their treasury management.
 
 Sample Bootstrapping Event: https://etherscan.io/tx/0xa6f0dd4bbd6c3c8fda0e20b3164294782b4fc36799f7785ccbd56edc0e623c2d
 
@@ -68,9 +61,9 @@ https://etherscan.io/tx/0xbf08ad49da92d4b509c0745a59eb780684e5f2c2c9b9eb68f4aa9c
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
 ```
-BNT Purchased = 1500 BNT
+
 BNT/LYRA Pool Deposit Limit = 100,000 BNT
-Days in Pool = >100 days or until IL protection is reached
+Days in Pool = >100 days or until IL protection is reached with Bancor V3
 
 ```
 
