@@ -1,7 +1,7 @@
 ---
 leap: 18
 title:  Universal Closing and Partial Collateralization
-status: Draft
+status: Approved
 author: Sean Dawson (@SeanDaws), Vladislav Abramov (@vladislavabramov), Joshua Kim (@joshua0702k), Domrom (@DominicRomanowski), Nick Forster (@nickf24), Lochcrest (@Lochcrest)
 created: 2022-02-18
 ---
