@@ -1,7 +1,7 @@
 ---
 leap: 23
 title: Add Lyra Liquidity on Bancor
-status: Approved
+status: Implemented
 author: Ksett
 created: 2022-04-22
 ---
