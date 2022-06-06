@@ -20,11 +20,11 @@ Initially, xLYRA was aimed to launch shortly after the Avalon release, however a
 ## Specification 
 - Deprecate the LYRA security module on L1 
 - Create a LYRA staking module on Optimism with an unstaking period of 28 days 
--Trading/LP rewards will be distributed in fortnightly epochs
--The staking module will accrue inflationary LYRA rewards, which will be distributed 182 days after earning
--Trading and LP LYRA to be distributed 28 days after they are earned upon an epoch’s completion
--Staking module participants will be eligible for inflationary rewards, trading and LP boosts
--Inflationary rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 except for the following: 
+- Trading/LP rewards will be distributed in fortnightly epochs
+- The staking module will accrue inflationary LYRA rewards, which will be distributed 182 days after earning
+- Trading and LP LYRA to be distributed 28 days after they are earned upon an epoch’s completion
+- Staking module participants will be eligible for inflationary rewards, trading and LP boosts
+- Inflationary rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 except for the following: 
     - Staked LYRA is transferable
     - xLYRA balances will not degrade during the cooldown period
     - Boosts will not apply for earned LYRA that is vesting (e.g. staking module rewards that are locked for 28 weeks) 
