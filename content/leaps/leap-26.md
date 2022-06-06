@@ -27,7 +27,7 @@ Initially, xLYRA was aimed to launch shortly after the Avalon release, however a
 - Inflationary rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 except for the following: 
     - Staked LYRA is transferable
     - xLYRA balances will not degrade during the cooldown period
-    - Boosts will not apply for earned LYRA that is vesting (e.g. staking module rewards that are locked for 28 weeks) 
+    - Boosts will not apply for earned LYRA that is vesting (e.g. the staking module rewards that are locked for 182 days) 
     - LP boosts will be calculated using the average staked LYRA balance of an address over an epoch 
     - Trading boosts will be calculated using the instantaneous staked LYRA balance of an address 
 - These mechanisms are to be implemented off-chain by the core contributors until the final audited contracts are ready (expected in late-September but could come later).
