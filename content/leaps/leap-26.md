@@ -81,7 +81,7 @@ N/A
 - Council can only decrease rewards for a pool with notice of 72 hours longer than the current cooldown period for exiting the liquidity pool. 
 - An increase in rewards can only be implemented with notice of 72 hours longer than the current cooldown period for entering the liquidity pool. 
 stkLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One stkLYRA balance can be used to simultaneously boost multiple pools. 
-- LP rewards will be distributed as stkLYRA.  
+- LP rewards will be distributed as stkLYRA in fortnightly epochs. 
 
 #### Implementation 
 A user receives LP rewards based on their **effective liquidity** in a given pool. Effective liquidity is a function of the liquidity and stkLYRA dedicated to a particular pool. This means that a LP can use stkLYRA to boost their rewards. This boost will be capped at 2 times the original liquidity provided.
