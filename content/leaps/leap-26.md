@@ -28,7 +28,7 @@ Initially, xLYRA was aimed to launch shortly after the Avalon release, however a
 - The staking module will accrue LYRA rewards, which will be distributed 182 days after earning
 - Trading and LP LYRA to be distributed 28 days after they are earned upon an epoch’s completion
 - Staking module participants will be eligible for staking rewards, trading and LP boosts
-- Staking rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 except for the following: 
+- Staking rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 (transcribed below) except for the following: 
     - Staked LYRA is transferable
     - xLYRA balances will not degrade during the cooldown period
     - Boosts will not apply for earned LYRA that is vesting (e.g. the staking module rewards that are locked for 182 days) 
@@ -52,3 +52,33 @@ This proposal will be deprecated in favor of the full xLYRA suite once LEAP-20 i
 
 ## Test Cases
 N/A
+
+## Addendum: LEAP-20 Methodology (Edited for clarity) 
+
+## Staking Rewards
+- stkLYRA holders will receive a share of token rewards in proportion to their stkLYRA balance
+- By default, this inflation rate should decrease by 50% each year, beginning one year after the first round of inflationary rewards are paid. The Council can elect to change this schedule with **one month’s notice** to the community.
+- Staking rewards will be distributed **fortnightly** after a 6 month delay. 
+- These emissions are independent of the security module, meaning that all stkLYRA is unable to be slashed should there be a shortfall event. 
+- The LYRA security module will be **deprecated** until there is a better fit for it within the protocol. The USDC security module will remain.
+
+## Trading Rewards
+- Following the introduction of partial collateralization in Avalon, trading rewards will shift to a rebate only model. Where users are eligible for a LYRA rebate on their stablecoin fees paid on opening and closing trades. 
+- Fee rebates will be paid out as a percentage of trading fees. For instance, a trade involving $40 of fees may receive a 25% rebate ($10) paid out in LYRA.
+- This percentage will be a continuous function of the amount of stkLYRA auser has staked. Specifically, the percentage rebate R will be given by: \\[R = min(R_{max}, c + max(0, a(b + log(\frac{x}{d})))\\] where _x_ is a user's staked stkLYRA and _a_, _b_, _c_, _d_ are parameters. The reward percentage _R_ will be capped at a fixed percentage \\(R_{max}\\). 
+- A preliminary choice of values is (_a_, _b_, _c_, _d_, \\(R_{max}\\)) = (4.5236, 10.39, 3, 5000000, 50%), meaning thhe maximum rebate will be 50%. Using the formula, this max rebate can only be obtained if a user has at least 5M stkLYRA staked. All users will receive at least a 3% on fees paid. The choice of a logarithm function means that users with small amounts of stkLYRA receive the vast majority of this rebate, making the benefits of holding stkLYRA available to all holders. 
+- For example, a user with 10,000 stkLYRA will have a rebate of 21.89% while a user with 1,000,000 stkLYRA will have a rebate of 42.72%.
+- The Council can choose different parameters per asset and tweak the maximum rebate percentage \\(R_{max}\\) (50% in the previous example). This can only be updated with 48 hours notice to the community. 
+- Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
+- Rewards will also be capped to 3,000,000/LYRA per fortnightly epoch as a safety measure. If the cap is reached, rewards are to be distributed to traders in proportion to their eligible LYRA rewards, as is currently the case with trading rewards. 
+- Strategic trading rewards targeting integration partners may be authorized by the Council. 
+- Trading rebates are to be distributed as stkLYRA in fortnightly epochs.   
+
+## LP Rewards
+- Council sets a monthly rate of LP rewards to be distributed across all pools
+- Council determines the distribution of rewards across markets (e.g 45% ETH, 45% BTC, 10% LINK)
+- Reward rates should target a utilization rate across all pools of 60% NAV monthly
+- Council can only decrease rewards for a pool with notice of 72 hours longer than the current cooldown period for exiting the liquidity pool. 
+- An increase in rewards can only be implemented with notice of 72 hours longer than the current cooldown period for entering the liquidity pool. 
+stkLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One stkLYRA balance can be used to simultaneously boost multiple pools. 
+- LP rewards will be distributed as stkLYRA.  
