@@ -83,8 +83,7 @@ N/A
 stkLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One stkLYRA balance can be used to simultaneously boost multiple pools. 
 - LP rewards will be distributed as stkLYRA.  
 
-**Implementation **
-
+#### Implementation 
 A user receives LP rewards based on their **effective liquidity** in a given pool. Effective liquidity is a function of the liquidity and xLYRA dedicated to a particular pool. This means that a LP can use xLYRA to boost their rewards. This boost will be capped at 2 times the original liquidity provided.
 Let M be the amount of LP tokens a given user has received for providing liquidity to an options pool. This user's effective liquidity \\(\M_{e})\\ is given by:
 
