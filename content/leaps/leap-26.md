@@ -1,7 +1,7 @@
 ---
 leap: 26
 title: Bridging Tokenomics until xLYRA 
-status: Draft
+status: Approved
 author: Nick Forster (@nickf24)
 created: 2022-06-06
 ---
