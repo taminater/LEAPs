@@ -10,7 +10,7 @@ created: 2022-05-01
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intend to achieve. This should be non-technical and accessible to a casual community member.-->
-This LEAP proposes to establish incentives for GrantsDAO.
+This LEAP proposes to establish incentives for GrantsDAO and align them with that of Lyra Council.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
@@ -43,9 +43,9 @@ This LEAP sets the compensation for the GrantsDAO as equal to that of Council.
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
-GrantsDAO members will receive the following each month:
-5000 LYRA
-$2000 worth of LYRA, using the open price on coingecko on the first of each month. If this price is less than $0.05, the DAO may pay council members in USDC.
+Lyra Council and GrantsDAO members will receive the following each month:
+$2500 worth of LYRA, using the open price on coingecko on the first of each month. 
+If this price is less than $0.05, the DAO may pay council members in USDC.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
