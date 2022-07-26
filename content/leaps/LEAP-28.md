@@ -3,10 +3,7 @@ leap: 28
 title: Increase Council Terms
 status: Draft
 author: Ksett
-
-
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-requires (*optional): <LEAP number(s)>
+created: 2022-7-26
 ---
 
 <!--You can leave these HTML comments in your merged LEAP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new LEAPs. Note that a LEAP number will be assigned by an editor. When opening a pull request to submit your LEAP, please use an abbreviated title in the filename, `leap-draft_title_abbrev.md`. The title should be 44 characters or less.-->
