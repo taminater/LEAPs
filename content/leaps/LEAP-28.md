@@ -1,5 +1,5 @@
 ---
-LEAP: 28
+leap: 28
 title: Increase Council Terms
 status: Draft
 author: Ksett
