@@ -1,8 +1,9 @@
 ---
-LEAP: Increase Council Terms
-title: LEAP 28
+LEAP: 28
+title: Increase Council Terms
 status: Draft
 author: Ksett
+
 
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
 requires (*optional): <LEAP number(s)>
