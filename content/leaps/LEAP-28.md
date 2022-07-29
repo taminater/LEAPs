@@ -16,7 +16,7 @@ This LEAP proposes to increase Lyra Council and Grants DAO terms to 4 months and
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-If this proposal is passed, all subsequent Lyra Council and Grants DAO terms will be increased to 4 months and the Grants DAOs next election shall coincide with the next Lyra Council election which will effectively extend current Grants DAO term by 2 months. . The Lyra Council established in [LEAP-15](https://leaps.lyra.finance/leaps/leap-15) and Grants DAO established in [LEAP-17](https://deploy-preview-58--lyra-leaps.netlify.app/leaps/leap-17) currently sits for 3 calendar months at a time. 
+If this proposal is passed, all subsequent Lyra Council and Grants DAO terms will be increased to 4 months and the Grants DAOs next election shall coincide with the next Lyra Council election, This will effectively extend current Grants DAO term by 2 months. . The Lyra Council established in [LEAP-15](https://leaps.lyra.finance/leaps/leap-15) and Grants DAO established in [LEAP-17](https://deploy-preview-58--lyra-leaps.netlify.app/leaps/leap-17) currently sits for 3 calendar months at a time. 
 
 
 ## Motivation
