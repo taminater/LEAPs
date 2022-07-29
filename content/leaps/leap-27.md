@@ -10,27 +10,30 @@ created: 2022-07-17
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-Establish an Australian corporate entity - Lyra Labs - which is to be contracted with to develop and maintain a user interface for the Lyra protocol. 
+Establish an Australian corporate entity, which can contract with the DAO as needed for various purposes, including, but not limited to, maintaining an interface for the protocol. 
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-This LEAP proposes the creation of such an entity ‘Lyra Labs’, and the subsequent contracting of said entity to develop and maintain the user interface to the Lyra protocol. Following its establishment, the DAO (via the Council) must be satisfied with the proposed arragement/contract in order to formally engage this entity.  
+This LEAP proposes the creation of such an entity ‘Lyra Labs’. Following its establishment, the DAO (via the Council and a separate LEAP), can contract with this entity as needed. 
 
 ## Motivation
-Until there is a sufficient available decentralized hosting service, any user interface must be maintained by individual entities. This LEAP aims to formalize this relationship between the DAO and such an entity, following the establishment of Lyra Labs whose purpose is to develop and maintain an interface to the protocol.
+Until there is a sufficient available decentralized hosting service, any user interface (as well as other future functions) must be maintained by individual entities. 
+
+There are a number of functions that would be beneficial to the DAO that currently require a centralized entity to execute. This includes, but is not limited to, maintaining and hosting an interface to the core protocol. This LEAP proposes the establishment of a candidate - Lyra Labs - who could fulfill this role. 
 
 ## Specification
-- Establish an entity: ‘Lyra Labs’ whose sole purpose is to develop and maintain an interface to the protocol 
-- Following this, the DAO (via the Council) to contract this entity and formalize the relationship between the entity and the DAO 
+- Establish an entity: ‘Lyra Labs,’ with which the DAO can contract to perform functions independently from the DAO
+- Following establishment, the DAO (via the Council) to contract with this entity and formalize the relationship between the entity and the DAO for relevant purposes (via a separate LEAP) 
 - The DAO/Council have the right to choose any entity for this process 
 
 ## Rationale
 In order to support an interface to the protocol in the long term, the DAO needs a formal entity which can:
 - Host user interfaces and files (currently via Netlify)
 - Use ETH nodes as a service, such as Infura and Alchemy
-- Use developer tools, such as analytics to understand user behaviour and centralized databases to store off-chain data
+- Use developer tools, such as analytics to understand user behaviour and centralized databases to store off-chain data.
 
-All protocol-related functions will remain the domain of the DAO, this entity would solely exist to engage and interface with the required parties in order to maintain and develop the user interface. 
+All protocol-related functions will remain the domain of the DAO, this entity would solely exist to engage and interface with relevant parties in order to maintain and develop the user interface. 
+
 
 ## Test Cases
 N/A
