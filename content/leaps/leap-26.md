@@ -1,8 +1,8 @@
 ---
-leap: 26
+leap: 26.1
 title: Bridging Tokenomics until xLYRA 
-status: Approved
-author: Nick Forster (@nickf24)
+status: Proposed
+author: Nick Forster (@nickf24), Jake Fitzgerald (@earthtojake)
 created: 2022-06-06
 ---
 
@@ -10,7 +10,9 @@ created: 2022-06-06
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-The earliest possible timeline for an audited set of tokenomics contracts from a reputable auditor is late-September. This LEAP proposes a set of interim tokenomics to accommodate the Avalon release until said time. 
+The earliest possible timeline for an audited set of tokenomics contracts from a reputable auditor is late-September. This LEAP proposes a set of interim tokenomics to accommodate the Avalon release until said time.
+LEAP 26.1 includes amendments based on the staked LYRA implementation.
+
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 Deprecate the LYRA security module on L1 and launch a LYRA staking module on Optimism. Implement off-chain staking, trading and LP rewards until the xLYRA contracts are fully audited and LEAP-20 is approved. 
@@ -18,15 +20,14 @@ Deprecate the LYRA security module on L1 and launch a LYRA staking module on Opt
 ## Motivation
 Initially, xLYRA was aimed to launch shortly after the Avalon release, however auditing constraints have delayed the xLYRA launch until at least September. The protocol should not wait to implement these important mechanics, and this proposal maps an implementable suite of changes that will support the protocol in its next phase. 
 ## Specification 
-- Deprecate the LYRA security module on L1 
+- Deprecate the LYRA security module on L1
 - Create a LYRA staking module on Optimism with a cooldown period of 14 days, and an unstaking period of 2 days
 - This staking module would use the StakedTokenV3 contracts from AAVE that are slightly modified to allow for a migration period once xLYRA is live, enabling instant withdrawals for users once it is ready
-- For the duration of of the cooldown and unstake periods, users will not receive any trading/LP/staking rewards
+- For the duration of of the cooldown period, users will not receive any staking rewards or boosted trading/LP rewards
 - Users will be unable to revert their cooldown once signalled
 - Staked LYRA tokens will be labelled as stkLYRA, to be distinguished from the upcoming xLYRA system
 - Trading/LP rewards will be distributed as stkLYRA in fortnightly (2-week) epochs
 - The staking module will accrue LYRA rewards, which will be distributed 182 days after earning
-- Trading and LP LYRA to be distributed 28 days after they are earned upon an epoch’s completion
 - Staking module participants will be eligible for staking rewards, trading and LP boosts
 - Staking rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 (transcribed below) except for the following: 
     - Staked LYRA is transferable
@@ -68,20 +69,17 @@ N/A
 - This percentage will be a continuous function of the amount of stkLYRA auser has staked. Specifically, the percentage rebate R will be given by: \\[R = min(R_{max}, c + max(0, a(b + log(\frac{x}{d})))\\] where _x_ is a user's staked stkLYRA and _a_, _b_, _c_, _d_ are parameters. The reward percentage _R_ will be capped at a fixed percentage \\(R_{max}\\). 
 - A preliminary choice of values is (_a_, _b_, _c_, _d_, \\(R_{max}\\)) = (4.5236, 10.39, 3, 5000000, 50%), meaning thhe maximum rebate will be 50%. Using the formula, this max rebate can only be obtained if a user has at least 5M stkLYRA staked. All users will receive at least a 3% on fees paid. The choice of a logarithm function means that users with small amounts of stkLYRA receive the vast majority of this rebate, making the benefits of holding stkLYRA available to all holders. 
 - For example, a user with 10,000 stkLYRA will have a rebate of 21.89% while a user with 1,000,000 stkLYRA will have a rebate of 42.72%.
-- The Council can choose different parameters per asset and tweak the maximum rebate percentage \\(R_{max}\\) (50% in the previous example). This can only be updated with 48 hours notice to the community. 
+- Council can adjust parameters per asset and tweak the maximum rebate percentage \\(R_{max}\\) (50% in the previous example). This can only be updated before the start of each epoch.
 - Rebate rewards will be capped at no more than w LYRA per dollar of trading fees. A preliminary value is _w_ = 3 LYRA per dollar of fees. For example, if Alice has a 40% rebate and makes a trade of $100, then she receives back $40 worth of LYRA. If LYRA is trading at $0.1 (based on a Uniswap TWAP price), then she would receive back 400 LYRA. If _w_ = 3, then the maximum amount of LYRA she can receive is capped at 300 LYRA.
 - Rewards will also be capped to 3,000,000/LYRA per fortnightly epoch as a safety measure. If the cap is reached, rewards are to be distributed to traders in proportion to their eligible LYRA rewards, as is currently the case with trading rewards. 
-- Strategic trading rewards targeting integration partners may be authorized by the Council. 
+- Strategic trading rewards targeting integration partners may be authorized by the Council.
 - Trading rebates are to be distributed as stkLYRA in fortnightly epochs.   
 
 ## LP Rewards
-- Council sets a monthly rate of LP rewards to be distributed across all pools
+- Council sets a rate of LP rewards to be distributed across all pools for the epoch. Rates can be adjusted by Council before the start of each epoch.
 - Council determines the distribution of rewards across markets (e.g 45% ETH, 45% BTC, 10% LINK)
-- Reward rates should target a utilization rate across all pools of 60% NAV monthly
-- Council can only decrease rewards for a pool with notice of 72 hours longer than the current cooldown period for exiting the liquidity pool. 
-- An increase in rewards can only be implemented with notice of 72 hours longer than the current cooldown period for entering the liquidity pool. 
-stkLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One stkLYRA balance can be used to simultaneously boost multiple pools. 
-- LP rewards will be distributed as stkLYRA in fortnightly epochs. 
+- stkLYRA holders can boost their reward, in proportion to their balance. The maximum boost will be equal to 2x their USD pro-rata share of the pool. One stkLYRA balance will simultaneously boost across all pools.
+- LP rewards will be distributed as stkLYRA in fortnightly epochs.
 
 #### Implementation 
 A user receives LP rewards based on their **effective liquidity** in a given pool. Effective liquidity is a function of the liquidity and stkLYRA dedicated to a particular pool. This means that a LP can use stkLYRA to boost their rewards. This boost will be capped at 2 times the original liquidity provided.
