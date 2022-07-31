@@ -21,13 +21,15 @@ Deprecate the LYRA security module on L1 and launch a LYRA staking module on Opt
 Initially, xLYRA was aimed to launch shortly after the Avalon release, however auditing constraints have delayed the xLYRA launch until at least September. The protocol should not wait to implement these important mechanics, and this proposal maps an implementable suite of changes that will support the protocol in its next phase. 
 ## Specification 
 - Deprecate the LYRA security module on L1
+- Deprecate the USDC security module on L1
 - Create a LYRA staking module on Optimism with a cooldown period of 14 days, and an unstaking period of 2 days
 - This staking module would use the StakedTokenV3 contracts from AAVE that are slightly modified to allow for a migration period once xLYRA is live, enabling instant withdrawals for users once it is ready
 - For the duration of of the cooldown period, users will not receive any staking rewards or boosted trading/LP rewards
 - Users will be unable to revert their cooldown once signalled
 - Staked LYRA tokens will be labelled as stkLYRA, to be distinguished from the upcoming xLYRA system
 - Trading/LP rewards will be distributed as stkLYRA in fortnightly (2-week) epochs
-- The staking module will accrue LYRA rewards, which will be distributed 182 days after earning
+- The staking module will accrue stkLYRA rewards, which will be distributed 182 days after earning
+- Trading/LP/staking rewards can also be modified by Council to include emissions from other DAO-owned tokens, such as OP from the Optimism Governance Fund.
 - Staking module participants will be eligible for staking rewards, trading and LP boosts
 - Staking rewards, trading and LP boosts to be enacted with the methodology specified in LEAP-20 (transcribed below) except for the following: 
     - Staked LYRA is transferable
