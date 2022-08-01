@@ -1,7 +1,7 @@
 ---
 leap: 25
 title: Incentivising GrantsDAO
-status: Draft
+status: Implemented
 author: ksett
 created: 2022-05-01
 ---
