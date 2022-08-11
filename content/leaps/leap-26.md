@@ -1,5 +1,5 @@
 ---
-leap: 26.1
+leap: 26
 title: Bridging Tokenomics until xLYRA 
 status: Proposed
 author: Nick Forster (@nickf24), Jake Fitzgerald (@earthtojake)
