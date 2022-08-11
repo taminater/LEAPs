@@ -1,7 +1,7 @@
 ---
 leap: 27
 title: DevCo
-status: Proposed
+status: Approved
 author: Jake Fitzgerald (@earthtojake)
 created: 2022-07-17
 ---
