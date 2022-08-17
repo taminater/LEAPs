@@ -1,7 +1,7 @@
 ---
 leap: 21
 title: Bridging Emissions Until Avalon
-status: Proposed
+status: Implemented
 author: Nick Forster (@nickf24)
 created: 2022-03-08
 ---

@@ -1,7 +1,7 @@
 ---
 leap: 18
 title:  Universal Closing and Partial Collateralization
-status: Draft
+status: Implemented
 author: Sean Dawson (@SeanDaws), Vladislav Abramov (@vladislavabramov), Joshua Kim (@joshua0702k), Domrom (@DominicRomanowski), Nick Forster (@nickf24), Lochcrest (@Lochcrest)
 created: 2022-02-18
 ---
@@ -57,8 +57,7 @@ This LEAP will be split into two sections: the first introduces Universal closin
 function. This allows for users to close very ITM/OTM positions. The second section introduces partially collateralized
 shorts, meaning traders shorting options will have to put up substantially less collateral than in V1.
 
-In the following, all parameters are configurable and values specified may change before mainnet deployment subject to
-further testing. A future LEAP will specify the initial values at launch and the justification behind each choice.
+In the following, all parameters are configurable and values specified may change before mainnet deployment subject to further testing. Parameters will be set by the core contributors and these choices will be communicated to the community via the Avalon docs.
 
 ### Rationale
 
@@ -190,7 +189,7 @@ The minimum amount of collateral is given by:
 
 where \\(\texttt{ShockVol} = \texttt{ShockVolA} = 2.5\\)  if \\(\texttt{Time_to_Expiry} < T_A = 4\\) weeks, \\(\texttt{ShockVol} = \texttt{ShockVolB} = 1.8\\)  if \\(\texttt{Time_to_Expiry} > T_B = 8\\) weeks and
 \\[
-\texttt{ShockVol} = \texttt{ShockVolA} - \frac{\texttt{ShockVolA} - \texttt{ShockVolB}}{T_{A} - T_{B}} \times (\texttt{Time_to_Expiry} - T_{A})
+\texttt{ShockVol} = \texttt{ShockVolA} - \frac{\texttt{ShockVolA} - \texttt{ShockVolB}}{T_{B} - T_{A}} \times (\texttt{Time_to_Expiry} - T_{A})
 \\]
 when \\(T_{A} \le \texttt{Time_to_Expiry} \le T_{B})\\). \\(\texttt{CallShock}\\) and \\(
 \texttt{PutShock}\\) are static percentage shocks to the current spot price and \\(
@@ -292,6 +291,17 @@ be able to transfer their option positions to any address. Consequently, users c
 listing with different collateral amounts and each would be liquidated separately, allowing users to divide risk. This
 also means collateral checks will not have to be performed on transferred short positions.
 
+### Technical Specification: Variance fee
+
+Periods of extreme turbulence in the market should attract higher fees since the AMM is exposed to greater risk and impermanent loss. Such a fee will also further decrease the possibility of the volatility surface being manipulated. For this reason, we propose including a new fee which we call the variance fee.
+
+The variance fee \\(F_{var}\\) will be defined as 
+\\[
+F_{var}=c_{0}\times(v_{0}+v_{1}\times\text{Vega})\times(s_{0}+s_{1}\left|R_{fix}-R\right|)\times(b_{0}+b_{1}\times\left|b^{GWAV}-b^{Spot}\right|)
+\\]
+
+where \\(c_{0},v_{i},s_{i},b_{i},R_{fix}\\) are constants, \\(\text{Vega}\\) is the vega of the trade, \\(R\\) is the skew of the trade and \\(b^{Spot},b^{GWAV}\\) are the spot/GWAV of the baseline volatilities. Essentially, the variance fee will increase for trades that cause the base volatility to deviate significantly from the GWAV.
+
 ### Configurable Values
 | Name | Symbol | Value |
 | ---- | ------ | ----- |
@@ -323,6 +333,132 @@ Fee Scale Time 1 | \\(T_{1}\\) | 8 weeks|
 Fee Scale Time 2 | \\(T_{2}\\) | 12 weeks|
 Option Price Coefficient | \\(\texttt{OptionPriceFeeCoefficient}\\) |1%|
 Spot Price Coefficient | \\(\texttt{SpotPriceFeeCoefficient}\\) |0.1%|
+
+## Interfaces
+
+### OptionMarket
+```solidity
+
+  struct TradeInputParameters {
+    uint strikeId;
+    uint positionId;
+    uint iterations;
+    OptionType optionType;
+    uint amount;
+    uint setCollateralTo;
+    uint minTotalCost;
+    uint maxTotalCost;
+  }
+
+  function openPosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function closePosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function forceClosePosition(TradeInputParameters memory params) 
+    external returns (Result memory result)
+
+  function addCollateral(uint positionId, uint amountCollateral) external
+
+  function liquidatePosition(uint positionId, address rewardBeneficiary) external
+```
+
+### OptionToken
+```solidity
+  enum PositionState {
+    EMPTY,
+    ACTIVE,
+    CLOSED,
+    LIQUIDATED,
+    SETTLED,
+    MERGED
+  }
+
+  struct OptionPosition {
+    uint positionId;
+    uint strikeId;
+    OptionMarket.OptionType optionType;
+    uint amount;
+    uint collateral;
+    PositionState state;
+  }
+
+  function canLiquidate(
+    OptionPosition memory position,
+    uint expiry,
+    uint strikePrice,
+    uint spotPrice
+  ) public view returns (bool)
+
+  function getOptionPositions(uint[] memory positionIds) 
+    external view returns (OptionPosition[] memory)
+```
+
+### OptionGreekCache
+```solidity
+  struct ForceCloseParameters {
+    uint ivGWAVPeriod;
+    uint skewGWAVPeriod;
+    uint shortVolShock;
+    uint shortPostCutoffVolShock;
+    uint longVolShock;
+    uint longPostCutoffVolShock;
+    uint liquidateVolShock;
+    uint liquidatePostCutoffVolShock;
+    uint shortSpotMin;
+    uint liquidateSpotMin;
+  }
+
+  struct MinCollateralParameters {
+    uint minStaticQuoteCollateral;
+    uint minStaticBaseCollateral;
+    uint shockVolA;
+    uint shockVolPointA;
+    uint shockVolB;
+    uint shockVolPointB;
+    uint callSpotPriceShock;
+    uint putSpotPriceShock;
+  }
+
+  function getMinCollateral(
+    OptionMarket.OptionType optionType,
+    uint strikePrice,
+    uint expiry,
+    uint spotPrice,
+    uint amount
+  ) external view returns (uint) 
+```
+
+### OptionMarketPricer
+```solidity
+  struct TradeLimitParameters {
+    int minDelta;
+    int minForceCloseDelta;
+    uint tradingCutoff;
+    uint minBaseIV;
+    uint maxBaseIV;
+    uint minSkew;
+    uint maxSkew;
+    uint minVol;
+    uint maxVol;
+    uint absMinSkew;
+    uint absMaxSkew;
+  }
+
+  struct VarianceFeeParameters {
+    uint defaultVarianceFeeCoefficient;
+    uint forceCloseVarianceFeeCoefficient;
+    uint skewAdjustmentCoefficient;
+    uint referenceSkew;
+    uint minimumStaticSkewAdjustment;
+    uint vegaCoefficient;
+    uint minimumStaticVega;
+    uint ivVarianceCoefficient;
+    uint minimumStaticIvVariance;
+  }
+```
+
 
 ## Copyright
 
