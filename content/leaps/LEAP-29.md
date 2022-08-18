@@ -105,7 +105,7 @@ The Treasury Council will fund the operational costs of new and existing partner
 The Lyra DAO requires funding for running and maintaining the protocol typically this is [insert cost of CL, node operators, website hosting, office space, marketing etc???] per month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council. 
 
 **Core Contributor Payments and Discretionary Bonuses:**
-TC  will be responsible for regular payments of Lyra contributors from their multi sig. TC will honor and formalize the vesting schedules of current contributors in accordance with their current agreements. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients.The Treasury Council will also set quarterly and yearly budgets for Contributor’s expenses. 
+TC will honor and formalize the vesting schedules of current contributors in accordance with their current agreements. At inception, a CC body will request funds from TC to fund themselves for one year. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients.Going forward, the Treasury Council will also set quarterly and yearly budgets for Contributor’s expenses. 
 
 
 
