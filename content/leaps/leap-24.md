@@ -14,11 +14,12 @@ A proposal to distribute 3,000,000 OP to incentivise usage and activity on Lyra.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2) made to the OP governance fund inside of the Lyra governance process.
+This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2) made to the OP governance fund inside of Lyra's governance framework.
 
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate. It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
+
 
 
 ## Specification
@@ -35,29 +36,38 @@ This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-pr
 <!--This is a high level overview of *how* the LEAP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
 ### Rationale
+Extensive discussion in Discord - see LEAP-24 thread in #dao-chat and the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202).
 
 ### Technical Specification
 
+
 #### Builders
 Amount: 600,000 OP
+Authority: Grants Council
+Criteria: Build on Lyra and apply to the [Grants Council](https://www.notion.so/Lyra-Grants-060f945ae1bc4802813249f191453a91)
+
 
 #### Liquidity
 Amount: 1,700,000 OP
 Authority: Lyra Council
+Criteria: Become a Lyra Liquidity Provider
+
+As per [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/), MMV rewards will be allocated by the Council every fortnight. As part of this process, Council can choose an allocation of OP.
+
+As per [LEAP-21](https://leaps.lyra.finance/leaps/leap-21), Council can increase rewards to the Uniswap v3 LYRA/WETH pair with no notice required. As part of this process, Council can choose an allocation of OP.
 
 #### Traders
 Amount: 500,000 OP
 Authority: Lyra Council
+Criteria: Start trading on Lyra
+
 
 #### Ecosystem
 Amount: 200,000 OP
 Authority: Lyra Counci
 
 #### Retroactive
-Traders 2.5
-LPs 2.5
-Builders 2.5
-LYRA holders 2.5
+10% of the builders allocation (60,000 OP) will be distributed retroactively to projects. No other groups will be rewarded retroactively.
 
 
 ### Configurable Values
