@@ -14,10 +14,12 @@ A proposal to distribute 3,000,000 OP to incentivise usage and activity on Lyra.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
+This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2) made to the OP governance fund inside of the Lyra governance process.
 
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate. It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
+
 
 ## Specification
 
@@ -37,16 +39,19 @@ A proposal to distribute 3,000,000 OP to incentivise usage and activity on Lyra.
 ### Technical Specification
 
 #### Builders
-600,000 OP
+Amount: 600,000 OP
 
 #### Liquidity
-1,700,000 OP
+Amount: 1,700,000 OP
+Authority: Lyra Council
 
 #### Traders
-500,000 OP
+Amount: 500,000 OP
+Authority: Lyra Council
 
 #### Ecosystem
-200,000 OP
+Amount: 200,000 OP
+Authority: Lyra Counci
 
 #### Retroactive
 Traders 2.5
