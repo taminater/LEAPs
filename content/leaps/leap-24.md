@@ -35,39 +35,45 @@ This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-pr
 ### Overview
 <!--This is a high level overview of *how* the LEAP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
+| Group | Amount | Authority | Retroactive |
+| ------ | ------ | ------ | ----- |
+| Builders | 600,000 OP | Grants Council | 60,000 OP |
+| Liquidity |  1,700,000 OP | Lyra Council | 0 |
+| Traders | 500,000 OP | Lyra Council | 0 |
+| Ecosystem | 200,000 OP | Lyra Council | 0 |
+
+
 ### Rationale
-Extensive discussion in Discord - see LEAP-24 thread in #dao-chat and the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202).
+Extensive discussion in Discord - see LEAP-24 thread in #dao-chat - and in the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202).
 
 ### Technical Specification
 
-
 #### Builders
-Amount: 600,000 OP
-Authority: Grants Council
-Criteria: Build on Lyra and apply to the [Grants Council](https://www.notion.so/Lyra-Grants-060f945ae1bc4802813249f191453a91)
+- Amount: 600,000 OP
+- Authority: Grants Council
+- Retroactive: 60,000 OP
+
+Eligible builders will apply to the [Grants Council](https://www.notion.so/Lyra-Grants-060f945ae1bc4802813249f191453a91)
 
 
 #### Liquidity
-Amount: 1,700,000 OP
-Authority: Lyra Council
-Criteria: Become a Lyra Liquidity Provider
+- Amount: 1,700,000 OP
+- Authority: Lyra Council
+- Retroactive: 0 OP
 
-As per [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/), MMV rewards will be allocated by the Council every fortnight. As part of this process, Council can choose an allocation of OP.
-
-As per [LEAP-21](https://leaps.lyra.finance/leaps/leap-21), Council can increase rewards to the Uniswap v3 LYRA/WETH pair with no notice required. As part of this process, Council can choose an allocation of OP.
+MMV rewards will be allloated by the council every fortnight, as per [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/). Council may allocate OP rewards across vaults as part of this process. Council can increase (no notice required) rewards to the Uniswap v3 LYRA/WETH pair as per [LEAP-21](https://leaps.lyra.finance/leaps/leap-21). Council may allocate OP to this pool. 
 
 #### Traders
-Amount: 500,000 OP
-Authority: Lyra Council
-Criteria: Start trading on Lyra
-
+- Amount: 500,000 OP
+- Authority: Lyra Council
+- Retroactive: 0 OP
 
 #### Ecosystem
-Amount: 200,000 OP
-Authority: Lyra Counci
+- Amount: 200,000 OP
+- Authority: Lyra Councill
+- Retroactive: 0 OP
 
-#### Retroactive
-10% of the builders allocation (60,000 OP) will be distributed retroactively to projects. No other groups will be rewarded retroactively.
+Lyra will host a virtual hackathon and create content to educate builers on (i) what to build with options and (ii) how to build on Lyra.
 
 
 ### Configurable Values
