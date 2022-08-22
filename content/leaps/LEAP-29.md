@@ -2,7 +2,7 @@
 leap: 29
 title: Establishing Lyra’s Treasury Council
 status: Draft
-author: ksett(@ksett737), Lochrest
+author: ksett(@ksett737), Lochrest, mjs (@mjs-12)
 created: 2022-8-17
 ---
 
