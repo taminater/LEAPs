@@ -18,7 +18,7 @@ This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-pr
 
 ##  Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate. It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
-As part of the OP token launch, projects such as Lyra qualified for a distribution. To receive the OP, Lyra must create a distribution that will incentivise usage and activity on the Optimism network.
+As part of the OP token launch, projects such as Lyra qualified for a distribution. To receive the OP, Lyra must create a plan that will incentivise usage and activity on the Optimism network.
 
 ## Specification
 Most descriptive information resides in the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2). This LEAP seeks to ratify only the specific quantities and which council has the authority.
