@@ -21,7 +21,7 @@ This LEAP seeks to ratify the [proposal](https://gov.optimism.io/t/gf-phase-0-pr
 As part of the OP token launch, projects such as Lyra qualified for a distribution. To receive the OP, Lyra must create a plan that will incentivise usage and activity on the Optimism network.
 
 ## Specification
-Most descriptive information resides in the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2). This LEAP seeks to ratify only the specific quantities and which council has the authority.
+Most descriptive information resides in the original [proposal](https://gov.optimism.io/t/gf-phase-0-proposal-lyra-finance/202/2). This LEAP seeks to ratify the quantities allocated to each section and which council has the authority to distribute the OP.
 
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
 1. Overview
@@ -79,7 +79,7 @@ OP can be allocated as part of the trading rebates outlined in [LEAP-26](https:/
 - Retroactive: 0 OP
 
 ##### Hackathon
-Lyra will host a virtual hackathon and create content to educate builers on (i) what to build with options and (ii) how to build on Lyra.
+Lyra will host a virtual hackathon and create content to educate builers on (i) what can be built with options and (ii) how to build on Lyra.
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
