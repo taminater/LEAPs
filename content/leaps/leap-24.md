@@ -10,7 +10,7 @@ created: 2022-05-01
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intend to achieve. This should be non-technical and accessible to a casual community member.-->
-A proposal to distribute 3,000,000 OP to incentivise usage and activity on Lyra.
+A proposal to distribute 3,000,000 OP to incentivise usage and activity on Lyra and the underlying Optimism network.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
