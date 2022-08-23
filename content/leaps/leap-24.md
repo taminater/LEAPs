@@ -3,7 +3,7 @@ leap: 24
 title: OP Incentives
 status: Draft
 author: mjs (@mjs-12)
-created: 2022-05-01
+created: 2022-08-23
 ---
 
 <!--You can leave these HTML comments in your merged LEAP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new LEAPs. Note that a LEAP number will be assigned by an editor. When opening a pull request to submit your LEAP, please use an abbreviated title in the filename, `leap-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -60,10 +60,10 @@ Eligible builders will apply to the [Grants Council](https://www.notion.so/Lyra-
 - Retroactive: 0 OP
 
 ##### Market Maker Vaults 
-OP can be allloated by the Lyra Council every fortnight, as per [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/).
+OP can be allocated by the Lyra Council every fortnight, as per [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/).
 
 ##### LYRA Token Liquidity
-OP can be allocated by the Lyra Council at anytime to the Uniswap v3 LYRA/WETH pair as per [LEAP-21](https://leaps.lyra.finance/leaps/leap-21).
+The Lyra Council can allocate OP at any time to the Uniswap v3 LYRA/WETH pair as per  [LEAP-21](https://leaps.lyra.finance/leaps/leap-21).
 
 #### Traders
 - Amount: 500,000 OP
