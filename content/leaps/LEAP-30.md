@@ -39,4 +39,4 @@ Leading to a lower volume equilibrium state. By bridging this capital efficiency
 ## Configurable Values 
 - 10 delta rate: $0.15/day/contract
 - 90 delta rate: $0.25/day/contract
-- >4 week discount rate: 50% (0.5) 
+- Greater than 4 week option discount rate: 50% (0.5) 
