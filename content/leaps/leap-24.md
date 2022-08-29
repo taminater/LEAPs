@@ -71,7 +71,7 @@ The Lyra Council can allocate OP at any time to the Uniswap v3 LYRA/WETH pair as
 - Retroactive: 0 OP
 
 ##### Rebates
-OP can be allocated as part of the trading rebates outlined in [LEAP-26](https://leaps.lyra.finance/leaps/leap-26/).
+OP can be allocated as part of the trading rebates outlined in [LEAP-30](https://leaps.lyra.finance/leaps/leap-30/).
 
 #### Ecosystem
 - Amount: 200,000 OP
