@@ -2,7 +2,7 @@
 leap: 30
 title: Reintroducing Short Collateral Trading Rewards
 status: Draft
-author: nf (@nickf24)
+author: nf (@nickf24), domrom (@0xdomrom)
 created: 2022-8-29
 ---
 
@@ -20,13 +20,14 @@ Despite the marked improvement in capital efficiency from v1 to Avalon, there ar
 - For options expiring in 4 weeks or less, traders will earn a rate of $0.15 (in $OP and stkLYRA) per contract per day, for options that are >= 0.10 delta.
 - This rate must be normalized for BTC (and other future markets) according to the ratio of ETH/BTC prices.
 - This rate increases linearly to $0.25/contract/day up to 0.90 delta.
-- These rates are discounted by a parameter (initially set to 0.5) for options that expire in more than 4 weeks
+- These rates are discounted by a parameter (initially set to 0.5) for options that expire in more than 4 weeks.
 - Option deltas are snapshotted and updated daily. If an option falls outside the 10-90 delta range, the collateral posted will no longer be eligible for rewards.
-- These rates are all updatable by the core contributors or Council
+- These rates are all updatable by the core contributors or Council, and will be set at the beginning of each 2 week epoch as with all other incentive programs proposed in LEAP-26.
+- The rewards will share the same split/reward caps as the trading rebates proposed in LEAP-26.
 
 ## Rationale 
 
-Given the lack of portfolio margin / spreads in the system, this is a reasonable rate to encourage options sellers to try the platform. With IV’s currently 10-15% above Deribit, it’s possible that the current markets are at an equilibrium where: 
+Given the lack of portfolio margin / spreads in the system, this is a reasonable rate to encourage options sellers to try the platform. With IV’s currently 10-15% above other markets, it’s possible that the current markets are at an equilibrium where: 
 - Options are too expensive for buyers 
 AND
 - The capital efficiency issues mean that sellers aren’t sufficiently incentivized to arbitrage prices back down
