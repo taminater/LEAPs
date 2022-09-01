@@ -1,7 +1,7 @@
 ---
 leap: 28
 title: Increase Council and Grants DAO Terms, Sync elections
-status: Proposed
+status: Implemented
 author: Ksett
 created: 2022-7-26
 ---
