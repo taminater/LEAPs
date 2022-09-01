@@ -1,7 +1,7 @@
 ---
 leap: 24
 title: OP Incentives
-status: Draft
+status: Rejected
 author: mjs (@mjs-12)
 created: 2022-08-23
 ---
