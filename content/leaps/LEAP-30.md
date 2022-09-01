@@ -1,7 +1,7 @@
 ---
 leap: 30
 title: Reintroducing Short Collateral Trading Rewards
-status: Draft
+status: Implemented
 author: nf (@nickf24), domrom (@0xdomrom)
 created: 2022-8-29
 ---
