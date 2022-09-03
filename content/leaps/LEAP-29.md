@@ -2,7 +2,7 @@
 leap: 29
 title: Establishing Lyra’s Treasury Council
 status: Draft
-author: ksett(@ksett737), Lochrest, mjs (@mjs-12)
+author: ksett(@ksett737), Lochrest
 created: 2022-8-17
 ---
 
@@ -16,7 +16,7 @@ This LEAP proposes to expand the Lyra DAO with the creation of The Lyra Treasury
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the LEAP is implemented, not *why* it should be done or *how* it will be done. If the LEAP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-The Lyra Treasury Council will be a four-seat committee responsible for the management of Lyra DAO funds.
+The Lyra Treasury Council will be a four-seat committee responsible for the management of Lyra DAO funds. 
 
 ## Motivation
 <!--This is the problem statement. This is the *why* of the LEAP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the LEAP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the LEAP will address the issue!-->
@@ -35,8 +35,8 @@ The Lyra DAO needs a structure in place to manage its treasury. Since introducin
 <!--This is a high level overview of *how* the LEAP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 This LEAP establishes a Treasury Council with four members voted on by LYRA token holders. The Treasury Council will sit for six calendar months, after which a new Treasury Council will be elected. The election will hold the same rules as the Lyra’s Council and GrantsDAO elections. see [LEAP-15](https://leaps.lyra.finance/leaps/leap-15).
 
-The Treasury Council has been delegated the power to spend and manage treasury funds by the Lyra Council’s approval of this LEAP and elected by the holders of LYRA. The Treasury Council will have the responsibility to make strategic decisions for the duration of the epoch. If the TC does not perform well or within the best interest of LYRA Holders for any reason, their powers may be revoked through a LEAP by Super Majority vote of first Council and then LYRA Holders.
-
+The Treasury Council has been delegated the power to spend and manage treasury funds by the Lyra Council’s approval of this LEAP and elected by the holders of LYRA. The Treasury Council will have the responsibility to make strategic decisions for the duration of the epoch. If the TC does not perform well or is within the best interest of LYRA Holders for any reason, their powers may be revoked through a LEAP by the Super Majority vote of first Council and then LYRA Holders.
+ 
 This LEAP places the following functions of the Lyra DAO under the control of the Treasury Council:
 
 1. Treasury Management
@@ -48,9 +48,9 @@ This LEAP places the following functions of the Lyra DAO under the control of th
 7. Issuing Discretionary Incentives
 8. Partnership Operational Costs
 9. Funding Operational Costs of the Lyra Protocol
-10. Core Contributor Payments and Discretionary Bonuses
+10. Funding the Operations Committee 
 
-Each of these functions is critical to the continued operation of the Lyra Protocol and will be the Treasury Council’s responsibility going forward. This LEAP is designed to ensure that these critical functions are performed by community members elected specifically for their ability to manage these responsibilities. 
+Each of these functions is critical to the continued operation of the Lyra Protocol and will be the Treasury Council’s responsibility going forward. This LEAP is designed to ensure that these critical functions are performed by community members elected specifically for their ability to manage these responsibilities.
 
 **Treasury Management**
 
@@ -62,7 +62,7 @@ The Lyra DAO wallets to be managed under this LEAP are:
 - 0x246d38588b16dd877c558b245e6d5a711c649fcf
 - 0xb6dacae4ef97b4817d54df8e005269f509f803f9
 
-In order to balance risk management and operational efficiency, the multisig will require 3/4 signatures.
+To balance risk management and operational efficiency, the multisig will require 3/4 signatures.
 
 **OTC and Strategic Deal Making:**
 
@@ -78,11 +78,12 @@ The TC will manage payments for all elected members of eligible governance bodie
 
 - $2500 worth of LYRA, using the open price on Coingecko on the first of each month. If this price is less than $0.05, the TC may pay council members in USDC or ETH.
 
-To avoid any conflict of interest, any change in governance stipends must be approved by a Super Majority vote of both Lyra’s Council, and Treasury Council.
+To avoid any conflict of interest, any change in governance stipends must be approved by a Super Majority vote of both Lyra’s Treasury Council and Operations Committee.
+
 
 **Funding Initiatives Approved by Council VIA the LEAP Framework**
 
-The Lyra Council has the ability to drive protocol changes through LEAPs. The council shall communicate and discuss with Treasury Council prior to the approval of any LEAP requiring funding, that the proposal is reasonable and suitable for funding.
+The Lyra Council can drive protocol changes through LEAPs. The council shall communicate and discuss with Treasury Council before the approval of any LEAP requiring funding, that the proposal is reasonable and suitable for funding.
 
 **Providing Budgets for GrantsDAO**
 
@@ -100,10 +101,8 @@ The Treasury Council will fund the operational costs of new and existing partner
 
 The Lyra DAO requires funding for running and maintaining the protocol each month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council.
 
-**Core Contributor Payments and Discretionary Bonuses:**
-
-Core Contributor Payments and Discretionary Bonuses: TC will honor and formalize the vesting schedules of current contributors in accordance with their current agreements. At inception, a CC body will request funds from TC to fund themselves for one year. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients. Going forward, the Treasury Council will also set quarterly and yearly budgets for Contributor’s expenses.
-
+**Funding the Operations Committee:**
+Funding the Operations Committee: At inception, an Operations Committee will be funded with 18 months of expenses for Core Contributor Operations. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients. Going forward, the Treasury Council will negotiate quarterly and yearly budgets for Contributor’s expenses with the Operations Committee. The TC shall replenish funding to the OC quarterly to maintain a 15 to 18-month runway for Core Contributor Operations. As unexpected needs may arise, the OC and TC may negotiate changes to the budget as needed.
 
 
 
@@ -114,8 +113,7 @@ Core Contributor Payments and Discretionary Bonuses: TC will honor and formalize
 - Setting up operating rules and procedures 
 - Establishing analytics and reporting policies 
 
-These policies and procedures are to be maintained by subsequent Treasury Councils and updated via LEAP when necessary.
-
+These policies and procedures are to be maintained by subsequent Treasury Councils and updated via LEAP when necessary. 
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -126,7 +124,7 @@ These policies and procedures are to be maintained by subsequent Treasury Counci
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for LEAPs but can be included with the implementation..-->
-
+The Lyra Operations Committee is looking to onboard an additional contributor, they negotiate with Treasury Council to fund the additional expense. 
 
 ### Configurable Values
 <!--Please list all values configurable under this implementation.-->
@@ -141,3 +139,12 @@ Copyright and related rights waived via [CC0](https://creativecommons.org/public
 References:
 https://newsletter.banklesshq.com/p/how-daos-should-approach-treasury
 https://sips.synthetix.io/sips/sip-155/
+
+
+
+
+
+
+
+
+
