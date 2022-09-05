@@ -19,7 +19,7 @@ Whilst theoretically sound, this mechanism is overly complicated and is difficul
 ## Specification
 The tiers for the new system are proposed in the below table (table with old system shown for reference). 
 
-### Old Program 
+**Old Program**
 | stkLYRA Balance | Rebate |
 | ------------- | ------------- |
 | 0 | 20% | 
@@ -35,7 +35,7 @@ The tiers for the new system are proposed in the below table (table with old sys
 | 2000000 | 58.24% | 
 | 3000000 | 59.99% | 
 
-### New Tiers
+**Proposed Tiers**
 | stkLYRA Balance | Rebate |
 | ------------- | ------------- |
 | 0 | 20% | 
