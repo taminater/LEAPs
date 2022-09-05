@@ -1,9 +1,9 @@
 ---
 leap: 33
-title: OP Incentives
+title: OP Incentives Take 2
 status: Proposed
 author: mjs (@mjs-12)
-created: 2022-08-23
+created: 2022-09-05
 ---
 
 <!--You can leave these HTML comments in your merged LEAP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new LEAPs. Note that a LEAP number will be assigned by an editor. When opening a pull request to submit your LEAP, please use an abbreviated title in the filename, `leap-draft_title_abbrev.md`. The title should be 44 characters or less.-->
