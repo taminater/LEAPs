@@ -17,7 +17,7 @@ Whilst theoretically sound, this mechanism is overly complicated and is difficul
 
 
 ## Specification
-The tiers for the new system are proposed in the below table (table with old system shown for reference). 
+The tiers for the new system are proposed in the below table (table with old system shown for reference). The Council can choose to alter these tiers from epoch to epoch, if necessary. 
 
 **Old Program**
 | stkLYRA Balance | Rebate |
