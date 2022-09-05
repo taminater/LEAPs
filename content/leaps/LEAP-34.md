@@ -80,8 +80,11 @@ Any remaining tasks not specifically outlined in a LEAP or that may arise in the
 ### Rationale
 This LEAP clarifies which responsibilities will fall under the newly established charters. Once core functionalities of each new charter are agreed upon, the implementation, delegation of powers, checks and balances between these groups, and on chain management of Lyra's governance will be defined in further LEAPs. To ensure a smooth transition and simplify the governance process, we must agree to a high-level structure before moving forward with specific details of each new governing body.
 
+![image](https://user-images.githubusercontent.com/88052534/188493528-cf968c73-9bb8-44b2-bc77-41a3c6db2391.png)
+
 ## Implementation
 This LEAP requires no additional implementation beyond the adoption of new processes utilizing the platforms currently active within Lyra. Further specifications for the delegation of power to Lyra’s Treasury Council and Operations Council and on-chain management of Lyra’s governance are to be outlined in subsequent LEAPs. 
+
 
 ## Technical Specification
 
