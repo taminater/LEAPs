@@ -1,4 +1,4 @@
---
+---
 leap: 35
 title: Lyra’s DAO Expansion
 status: Draft
