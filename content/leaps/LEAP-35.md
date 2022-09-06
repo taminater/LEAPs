@@ -1,5 +1,5 @@
 --
-leap: 34
+leap: 35
 title: Lyra’s DAO Expansion
 status: Draft
 author: ksett(@ksett737)
