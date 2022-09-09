@@ -1,7 +1,7 @@
 ---
 leap: 34
 title: Simplifying Trader Rebates
-status: Draft
+status: Proposed
 author: Nick Forster (@nickf24)
 created: 2022-09-05
 ---
