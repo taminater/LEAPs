@@ -93,6 +93,5 @@ This LEAP requires no additional implementation beyond the adoption of new proce
 This LEAP draws heavy inspiration from Synthetix, Yearn, and multiple other successful governance structures. Ref YIP 41, YIP 61, SIP ..
 
 ## Configurable Values
-Super Majority = 75%
-Simple Majority = 60%
+
 Treasury  Council Election term = 6 months
