@@ -1,7 +1,7 @@
 ---
 leap: 35
 title: Lyra’s DAO Expansion
-status: Draft
+status: Proposed
 author: ksett(@ksett737)
 created: 2022-01-09
 
