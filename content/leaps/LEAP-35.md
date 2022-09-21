@@ -34,23 +34,23 @@ Streamlining Lyra's treasury management and operations creates the clarity and c
 ### Overview: New Councils
 Lyra's DAO currently has several responsibilities better suited for execution by elected groups.
 
-1. Lyra’s DAO functionalities:
-2. Treasury Management
-3. OTC and Strategic Deal Making
-4. Metagovernance Participation
-5. Governance Stipends
-6. Funding Initiatives Approved by Council VIA the LEAP Framework
-7. Providing Budgets for Grants DAO
-8. Issuing Discretionary Incentives
-9. Partnership Operational Costs
-10. Funding Operational Costs of the Lyra Protocol
-11. Core Contributor Payments and Discretionary Bonuses
-12. Management of Lyra’s Road-map and Vision
-13. Core Contributor Engagement and Disengagement
-14. Core Contributor Incentivization
-15. Core Contributor Resourcing & Prioritization
-16. Formalizing the qualification process and retention packages for future contributors 
-17. Establishment of Lyra’s working Teams 
+Lyra’s DAO functionalities:
+1. Treasury Management
+2. OTC and Strategic Deal Making
+3. Metagovernance Participation
+4. Governance Stipends
+5. Funding Initiatives Approved by Council VIA the LEAP Framework
+6. Providing Budgets for Grants DAO
+7. Issuing Discretionary Incentives
+8. Partnership Operational Costs
+9. Funding Operational Costs of the Lyra Protocol
+10. Core Contributor Payments and Discretionary Bonuses
+11. Management of Lyra’s Road-map and Vision
+12. Core Contributor Engagement and Disengagement
+13. Core Contributor Incentivization
+14. Core Contributor Resourcing & Prioritization
+15. Formalizing the qualification process and retention packages for future contributors 
+16. Establishment of Lyra’s working Teams 
 
 The division of these responsibilities between the new charters is as follows: 
 
@@ -72,8 +72,9 @@ Lyra’s Operations Committee:
 3. Core Contributor Engagement/Disengagement 
 4. Core Contributor Incentivization 
 5. Core Contributor Resourcing & Prioritization
-6. Establishment of Lyra’s working groups
-7. Formalizing the qualification process and retention packages for future contributors  
+6. Formalizing the qualification process and retention packages for future contributors  
+7. Establishment of Lyra’s working groups
+
 
 Any remaining tasks not specifically outlined in a LEAP or that may arise in the future that are not defined here, shall be the responsibility of Lyra’s Council to either perform that functionality or delegate responsibility to a new or existing governing body within the Lyra DAO.
 
@@ -90,8 +91,8 @@ This LEAP requires no additional implementation beyond the adoption of new proce
 
 ## References
 
-This LEAP draws heavy inspiration from Synthetix, Yearn, and multiple other successful governance structures. Ref YIP 41, YIP 61, SIP ..
-Configurable Values
-Super Majority = 75%
-Simple Majority = 60%
+This LEAP draws heavy inspiration from Synthetix, Yearn, and multiple other successful governance structures. Ref YIP 41, YIP 61, SIP 155
+
+## Configurable Values
+
 Treasury  Council Election term = 6 months
