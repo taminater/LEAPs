@@ -99,7 +99,7 @@ The Treasury Council will fund the operational costs of new and existing partner
 
 **Funding Operational Costs of the Lyra Protocol**
 
-The Lyra DAO requires funding for running and maintaining the protocol each month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council.
+The Lyra Protocol requires funding for running and maintaining the protocol each month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council.
 
 **Funding the Operations Committee:**
 Funding the Operations Committee: At inception, an Operations Committee will be funded with 18 months of expenses for Core Contributor Operations. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients. Going forward, the Treasury Council will negotiate quarterly and yearly budgets for Contributor’s expenses with the Operations Committee. The TC shall replenish funding to the OC quarterly to maintain a 15 to 18-month runway for Core Contributor Operations. As unexpected needs may arise, the OC and TC may negotiate changes to the budget as needed.
