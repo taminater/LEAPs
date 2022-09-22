@@ -118,6 +118,9 @@ These policies and procedures are to be maintained by subsequent Treasury Counci
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
+The formation of Lyra’s Treasury Council ensures that these critical functions are carried out by community members that are elected by token holders for their ability to carry out these functions. 
+
+
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Lyra currently exposes or the creations of new ones.-->
 
