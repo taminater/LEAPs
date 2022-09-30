@@ -1,7 +1,7 @@
 ---
 leap: 31
 title: Guardian Specification
-status: Proposed
+status: Approved
 author: Sean (@SeanDaws), Ksett (@ksett737), Domrom (@DominicRomanowski)
 created: 2022-09-05
 ---
