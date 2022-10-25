@@ -13,7 +13,7 @@ created: 2022-10-24
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
 Increase pool capital efficiency by allowing the AMM to partially cash collateralize its short positions. Spot risk is 
-accounted for by extending delta hedging capacity of the pool. Newly introduced potential insolvency will trigger contract adjustments for long traders.
+accounted for by extending delta hedging capacity of the pool. Newly introduced insolvency risk will be handled by contract adjustments for long traders.
 
 ## Abstract
 
@@ -71,8 +71,8 @@ Two new parameters will be introduced to the LiquidityPool to handle scaling the
 * `CallCollateralScalingFactor` - How much to scale cash held for calls sold by the AMM (e.g. 0.7)
 * `PutCollateralScalingFactor` - How much to scale cash held for puts sold by the AMM (e.g. 0.8)
 
-The amount of funds reserved by the AMM will be equal to `lockedCollateral.quote * PutCollateralScalingFactor + 
-lockedCollateral.base * CallCollateralScalingFactor`. These funds will be available for the PoolHedger to use to
+The amount of quoteAsset funds reserved by the AMM will be equal to `lockedCollateral.quote * PutCollateralScalingFactor + 
+lockedCollateral.base * spotPrice * CallCollateralScalingFactor`. These funds will be available for the PoolHedger to use to
 collateralise any hedges that it may make - which differs from the Avalon release, where there was clear separation of
 option collateral and hedging liquidity.
 
