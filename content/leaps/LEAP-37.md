@@ -1,6 +1,6 @@
 ---
 leap: 37
-title: NoEther 
+title: NoEther Service Provider
 status: Draft
 author: mjs (@mjs-12)
 created: 2022-10-27
