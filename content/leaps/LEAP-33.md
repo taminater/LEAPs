@@ -1,7 +1,7 @@
 ---
 leap: 33
 title: OP Incentives Take 2
-status: Approved
+status: Implemented
 author: mjs (@mjs-12)
 created: 2022-09-05
 ---
