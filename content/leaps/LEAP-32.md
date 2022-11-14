@@ -1,7 +1,7 @@
 ---
 leap: 32
 title: Standardizing LEAP Discourse
-status: Proposed
+status: Implemented
 author: Lochcrest (@Lochcrest), Sean (@SeanDaws)
 created: 2022-09-12
 ---
