@@ -25,10 +25,13 @@ Given its recent volatility and degradation of liquidity, SOL no longer meets th
 ### Rationale
 The unknown future state of liquidity and the binary nature of the potential price movement in the Solana market makes it an inappropriate asset for the AMM. Listing additional options on SOL would create undue risk for LPs. SOL should be delisted as an asset and re-evaluated once market conditions normalize.
 
-### Configurable Variables
+### Configurable Values
 SOL market parameters will be determined by CCs.
 short collateral rewards = 0
 trading rewards = 0
+
+## Test Cases
+N/A
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
