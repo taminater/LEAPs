@@ -29,3 +29,6 @@ The unknown future state of liquidity and the binary nature of the potential pri
 SOL market parameters will be determined by CCs.
 short collateral rewards = 0
 trading rewards = 0
+
+## Copyright
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
