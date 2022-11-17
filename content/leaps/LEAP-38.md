@@ -20,15 +20,15 @@ Given its recent volatility and degradation of liquidity, SOL no longer meets th
 - Add no additional expiries or strikes in the SOL markets 
 - Allow delta hedging to continue through the last expiration, Nov 25th 
 - Block any new deposits from entering the SOL MMV
-- LP rewards and  trading rewards should continue as planned through the Nov 25th expiry and then cease
+- LP rewards and trading rewards should continue as planned through the Nov 25th expiry and then cease
+
 
 ## Rationale
 The unknown future state of liquidity and the binary nature of the potential price movement in the Solana market makes it an inappropriate asset for the AMM. Listing additional options on SOL would create undue risk for LPs. SOL should be delisted as an asset and re-evaluated once market conditions normalize.
 
 ## Configurable Variables
 SOL market parameters will be determined by CCs.
-short collateral rewards = 0
-trading rewards = 0 
+
 
 
 
