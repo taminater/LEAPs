@@ -1,6 +1,6 @@
 ---
 leap: 38
-title: depricate SOL Market
+title: deprecate SOL Market
 status: draft 
 author: Ksett (@ksett737)
 created: 2022-11-14
