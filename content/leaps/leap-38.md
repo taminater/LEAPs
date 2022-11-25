@@ -2,7 +2,7 @@
 leap: 38
 title: GMX hedging and deploy on Arbitrum
 status: Draft
-author: Domrom (@0xdomrom), Nick Forster (@nickf24), Cameron (@beefmaster)
+author: Domrom (@0xdomrom), NF (@nickf24), Cameron (@beefmaster)
 created: 2022-11-25
 ---
 
@@ -34,11 +34,11 @@ There will be an additional `canHedge` check added to the LiquidityPool contract
 
 | Parameter              | Description                                                             | Value     |
 |------------------------|-------------------------------------------------------------------------|-----------|
-| acceptableSpotSlippage | the maximum difference between the CL price and executed GMX price      | 1.02 (2%) |
+| acceptableSpotSlippage | The maximum difference between the CL price and executed GMX price      | 1.02 (2%) |
 | deltaThreshold         | Bypass the interaction delay if the required hedge is greater than this | 100       |
-| targetLeverage         | target leverage ratio                                                   | 1.5       |
-| leverageBuffer         | leverage tolerance before allowing collateral updates                   | 0.4       |
-| minCancelDelay         | seconds until a pending order can be canceled                           | 120       |
+| targetLeverage         | Target leverage ratio                                                   | 1.5       |
+| leverageBuffer         | Leverage tolerance before allowing collateral updates                   | 0.4       |
+| minCancelDelay         | Seconds until a pending order can be canceled                           | 120       |
 
 
 ## Copyright
