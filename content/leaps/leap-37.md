@@ -1,7 +1,7 @@
 ---
 leap: 37
 title: Deprecate SOL Market
-status: Approved 
+status: Implemented 
 author: Ksett (@ksett737)
 created: 2022-11-14
 ---
