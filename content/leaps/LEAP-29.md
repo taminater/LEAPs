@@ -99,7 +99,7 @@ The Treasury Council will fund the operational costs of new and existing partner
 
 **Funding Operational Costs of the Lyra Protocol**
 
-The Lyra DAO requires funding for running and maintaining the protocol each month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council.
+The Lyra Protocol requires funding for running and maintaining the protocol each month, the TC will be responsible for ensuring the Lyra DAO has funds needed for testing and administration of the protocol. TC shall also fund any contracts with DevCo established in LEAP 27 approved through LEAP by Council or any other entity contracted by the Lyra Council.
 
 **Funding the Operations Committee:**
 Funding the Operations Committee: At inception, an Operations Committee will be funded with 18 months of expenses for Core Contributor Operations. While Lyra’s Treasury multi-sig has full visibility, names and compensation of individuals will not be published as a security precaution for the recipients. Going forward, the Treasury Council will negotiate quarterly and yearly budgets for Contributor’s expenses with the Operations Committee. The TC shall replenish funding to the OC quarterly to maintain a 15 to 18-month runway for Core Contributor Operations. As unexpected needs may arise, the OC and TC may negotiate changes to the budget as needed.
@@ -117,6 +117,9 @@ These policies and procedures are to be maintained by subsequent Treasury Counci
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+
+The formation of Lyra’s Treasury Council ensures that these critical functions are carried out by community members that are elected by token holders for their ability to carry out these functions. 
+
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Lyra currently exposes or the creations of new ones.-->
