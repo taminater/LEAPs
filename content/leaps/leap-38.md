@@ -1,7 +1,7 @@
 ---
 leap: 38
 title: GMX hedging and deploy on Arbitrum
-status: Draft
+status: Approved
 author: Domrom (@0xdomrom), NF (@nickf24), Cameron (@beefmaster)
 created: 2022-11-25
 ---
