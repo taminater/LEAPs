@@ -1,41 +1,36 @@
 ---
 leap: 39
-title: LEAP dHEDGE Whitelist
+title: LEAP Generalized Rebate Whitelist
 status: Draft
-author: Taminater (@Taminater#0002)
-created: 2022-11-23
+author: Taminater (@Taminater#0002), Muir (@Muir#0814)
+created: 2022-11-23x
 ---
 
 ## Simple Summary
-White list dHEDGE pools for rebate
+Define a process for adding integrators to a rebate whitelist
 
 ## Abstract
-This proposal is for whitelisted dHEDGE Vaults to receive a flat fee rebate of 50% on a trial basis. The length will be variable and decided by Lyra Council.
+This proposal is for creating a whitelisting policy for integrator rebates that allows the council to quickly add/remove whitelisted integrators via discord.
 
 ## Motivation
-Providing a fee rebate to the dHEDGE Vaults and Toros Vaults benefits Lyra via increased volume and usage of Lyra through automated strategies (Toros) and active asset management (dHEDGE). 
+Providing a fee rebate to integrators benefits Lyra via increased volume and usage of Lyra.  Currently it is not possible for integrators to stake Lyra to earn rebates for their vaults, and the process to add whitelisted integrators via LEAPs is cumbersome.
 
 ## Specification
-dHEDGE Vault addresses will be provided rebates under Lyra’s rewards script:
-Lyra's rewards script will call isPool(address) on dHEDGE Factory contract https://optimistic.etherscan.io/address/0x5e61a079A178f0E5784107a4963baAe0c5a680c6#readProxyContract
+The Lyra council will approve rebate requests for integrators on a case by case basis via discord.  The integrator list will be maintained manually and the rewards script will be adjusted to provide rebates for the whitelisted integrators, based on their staked amount. 
 
-Rewards will be claimed directly to dHEDGE vaults that make the trades https://optimistic.etherscan.io/address/0x5e61a079A178f0E5784107a4963baAe0c5a680c6
-Managers can claim rewards for the vault
+The whitelisting proposals will include
+- Amount staked
+- Rebate tier
+- Designated vaults
+- Claimant address
+- Rebate duration
 
-Specific dHEDGE pools to be approved by Lyra Council:
+The vote to approve whitelisted integrators will occur on discord via an emoji snap vote, requiring a simple majority to pass.  There are no time constraints for the snap vote.
 
-Whitelist 2 initial Toros Vaults for rebates:
-
-ETH Covered Call - https://optimistic.etherscan.io/address/0xe6da92fca08d540aa624e9949f9e7768fee80e6c
-ETH Long Volatility - https://optimistic.etherscan.io/address/0x44ca2d499e6254dfdc17fdef8c23e7283e7c24e4
-
-dHEDGE DAO will purchase and stake 250k LYRA tokens for at least the period of the fee rebate trial. stLYRA will be at this address: https://optimistic.etherscan.io/address/0x352Fb838A3ae9b0ef2f0EBF24191AcAf4aB9EcEc
-
+At any time the Lyra Council reserves the right to revoke whitelist spots.
 
 ## Rationale
-Lyra does not currently offer delegation of boosting from staked Lyra which puts dHEDGE managers at a disadvantage. dHEDGE will hold an amount of stkLYRA that would otherwise earn traders a rebate. Lyra should support dHEDGE and our partnership by ensuring they receive an appropriate rebate while evaluating delegation models in future tokenomics. dHEDGE is an integration that can drive steady volume to Lyra’s MMVs and we should strive for long-term alignment between the protocols. 
+Lyra does not currently offer delegation of boosting from staked Lyra which puts integrators at a disadvantage. Integrators will hold an amount of stkLYRA that would otherwise earn traders a rebate. Lyra should support integrators and partnership by ensuring they receive an appropriate rebate while evaluating delegation models in future tokenomics. 
 
 ## Configurable Values
-Percentage Rebate = 50%
-Rewards Period = Variable
-dHEDGE stkLYRA Position = 250,000 stkLYRA
+
